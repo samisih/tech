@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Luckiest+Guy&family=Russo+One&family=Special+Elite&family=Syne+Mono&display=swap');
+
+/* * {
+    border: 1px white solid;
+}
+ */
+$headerLucky: "Luckiest Guy",
+'Segoe UI',
+sans-serif;
+$headerRusso: "Russo One",
+sans-serif;
+$textSyne: "Syne mono",
+monospace;
+$textPrimary: 'Inconsolata',
+monospace;
+
+$light:300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+$body-bg: black;
+
+/*Text Colors */
+$black: #000;
+$white: #fff;
+$blue: blue;
+$red: red;
+$yellow: #fff;
+$green: #fff;
+$white: #fff;
+$white: #fff;
+
+
+body {
+    font-family: $textPrimary;
+    font-weight: $light;
+    -webkit-text-size-adjust: 100%;
+}

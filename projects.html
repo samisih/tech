@@ -1,0 +1,343 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+    crossorigin="anonymous">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>My Projects</title>
+</head>
+<section id="projects"> 
+  
+   
+  <!-- BreadCrumb -->
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item"><a href="about.html">About</a></li>
+    <li class="breadcrumb-item"><a href="education.html">Education</a></li>
+    <li class="breadcrumb-item" aria-current="projects.html"
+    active>Projects</a></li>
+    <li class="breadcrumb-item"><a href="gallery.html">Gallery</a></li>
+    <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
+  </ol>
+</nav>
+  <!-- /BreadCrumb -->
+  
+  
+<!-- Jumbotron -->
+<div class="jumbotron text-center text-white bg-dark">
+  <h2 class="display-4 mt-5 slide-left" id="#">Projects</h2>
+  <p class="lead mt-5">
+    I've been collected some project's here</p>
+</div>
+<!-- /Jumbotron -->
+<div class="container">
+    <br><br><br>
+    <div class="row">
+            <div class="col-md-4">
+            <h3 class="card-title text-center">Js Document</h3>
+            <p class="text-center text-light"><a
+            href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page">
+            Freecodecamp HTML/CSS</a> Technical Documentation Page</p>
+            <div class="card-body card-img img-fluid"><a
+            href="https://codepen.io/saukho/pen/LYGPPYL"><img class="img-fluid"
+            src="images/documentation.webp" alt="">
+            </a>
+            </div> 
+            </div>
+
+            <div class="col-md-4">
+            <h3 class="card-title text-center">Grid Practise</h3>          
+            <p class="text-center text-light"><b>Taitotalo's </b>HTML / CSS course grid practise</p>
+            <div class="card-body card-img img-fluid"><a
+            href="https://codepen.io/saukho/full/jObRaRj"><img class="img-fluid"
+            src="images/gridpipe.webp" alt="grid practise">
+            </a>
+            </div>
+          </div>
+    
+           <div class="col-md-4">
+            <h3 class="card-title text-center" id="text" onmouseover="changeText('This was my first project')" mouseout="defaultText()">Tribute page</h3>
+              <p class="text-center text-light"><a
+            href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page">
+            Freecodecamp HTML/CSS</a> Tribute Page</p>
+            <div class="card-body card-img img-fluid">
+            <a href="https://codepen.io/saukho/full/YzPzLLX"><img
+            src="images/tributepage.webp" class="img-fluid" alt="airbnb clone" >
+          </a>
+            </div>
+          </div>
+        <div class="row">          
+            <div class="col-md-4">
+              <h3 class="card-title text-center">Drumkit</h3>          
+          <p class="text-center text-light"><a href="https://www.udemy.com/share/1013eAAEMecV5aR38J/">Udemy's </a> The
+          complete 2020 Web development Bootcamp courses</p>
+            <div class="card-body card-img img-fluid"><a
+            href="drumkit/index.html"><img class="img-fluid"
+            src="images/drumkit.webp" alt="">
+        </a>
+      </div>
+          </div>
+          <div class="col-md-4">
+            <h3 class="card-title text-center">Color Flipper</h3>
+            <p class="text-center text-light" ><a
+            href="https://www.youtube.com/watch?v=PkZNo7MFNFg&t=23s">
+            Freecodecamp JavaScript</a> online course</p>
+            <div class="card-body card-img img-fluid"><a
+            href="colorflipper/index.html"><img class="img-fluid"
+            src="images/colorflipper.webp" alt="">
+          </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h3 class="card-title text-center">Airbnb Clone</h3>
+              <p class="text-center text-light">Airbnb-clone build by <a
+              href="https://www.youtube.com/watch?v=BtJeH_-XYaA">Clever
+              Programmers</a> React For Beginners Course</p>
+            <div class="card-body card-img img-fluid">
+            <a href="https://airbnb-clone-5755d.web.app/"><img
+            src="images/Airbnb.webp" class="img-fluid" alt="airbnb clone">
+          </a>
+            </div>
+          </div>
+         </div>
+       </div>
+       <div class="jumbotron bg-dark"><div class="container"></div>
+ <h3 class="display-5">JavaScript Harjoituksia</h3>
+<br><br>
+<!-- ITSE MODIFIOITU KELLO JA PÄIVÄMÄÄRÄ -->
+<h3>Suomen kielelle kustomoitu kello <span class="badge badge-secondary">Uusin</span></h3>
+    <div id="time"></div>
+    <hr>
+
+<!-- FUNKTIO ARPOO NUMERON NOLLAN JA ANNETUN NUMERON VÄLILTÄ, FUNTIO PALAUTTAA NUMERON -->
+ <form class="text-success">
+<!-- Sinun nimesi on -->
+<h2>Sinun nimesi</h2>
+<label>Nimi</label>
+<input id="myText" type="text"/><p id="name">Sinun nimesi on: </p>
+<button type="button"  onclick="sinunNimesi()" >Paina</button>
+<br>
+
+<br><br><br><br>
+
+       <!-- KERTAUSTA -->
+    <!-- FUNKTIO NELJÄ ARGUMENTTIA -->
+    <h1>Anna neljä numeroa</h1>
+<input type="text" name="miinus" id="eka">
+<input type="text" name="miinus" id="toka">
+<input type="text" name="miinus" id="kolmas">
+<input type="text" name="miinus" id="neljas">
+<button type="button"  onclick="miinusta()" >Laske</button>
+<p id="miinus">Neljän numeron miinuslaskun tulos:</p>
+<br><br><br><br>
+<!-- KUINKA MONTA KIRJAINTA -->
+<h3>Funktio, joka palauttaa tiedon (luku) kuinka monta kertaa annettu kirjain esiintyy
+merkkijonossa. Tulostus muotoa ”Kirjain a esiintyy merkkijonossa ’Kuinka kaipaankaan
+kissaa?’ 8 kertaa.”
+</h3>
+<br>
+<h4>Kirjoita alle jokin lause:</h4>
+<input type="text" name="addNum" id="annettuLause">
+<button type="button"  onclick="laskeKirjaimia()" >Laske</button>
+<p id ="kirjaimet">Löydettyjen Aa-kirjainten määrä</p>
+<br><br><br><br>
+
+<!--KOLMEN NUMERON YHTEENLASKU -->
+<h1>Kolmen numeron yhteenlasku</h1>
+<input type="text" name="addNum" id="addFirstNum">
+<input type="text" name="addNum" id="addSecondNum">
+<input type="text" name="addNum" id="addThirdNum">
+<button type="button"  onclick="countNums()" >Laske</button>
+<p id ="count">Kolmen numeron yhteenlaskun tulos:</p>
+<br><br><br><br>
+<!-- JAVASCRIPT ON PARASTA IKINÄ -->
+<button type="button" onclick="jaavaSkripti()">Mitä JavaScript on?</button>
+<h4 id="best"></h4>
+<br>
+<br>
+<br>
+<br>
+<!-- Harjoitus 5. HTML + JS -->
+<h1>Harjoitus 5 teksti ja numero</h1>
+<h4>Anna sana ja numero</h4>
+<input type="text" name="addNum" id="word">
+<input type="text" name="addNum" id="number">
+<button type="button"  onclick="valueCounter()" id="btn">Paina</button>
+<br>
+<p id ="tulos"></p>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<h3 class="display-5">Uutta Harjoitusta
+    <br>
+    FUNKTIO ARPOO NUMERON NOLLAN JA ANNETUN NUMERON VÄLILTÄ, FUNKTIO PALAUTTAA NUMERON
+</h3>
+<br>
+<h2>Numero Lotto: Anna jokin numero</h2>
+<input class="form-control-sm" type="text" id="num">
+<p id="text">Funktio arpoo annetun numeron ja nollan väliltä luvun</p>
+<button type="button" id="btn" onclick="arpooLuvun()">Arvo numero</button>
+<p id="demo">Arvottu Luku : </p>
+<br><br><br><br>
+    <!-- UUTTA HARJOITUSTA TEHTÄVÄ 2. KOLME NUMEROA -->
+
+      <h2>Anna kolme numeroa</h2>
+<input class="form-control-sm" type="text" id="num1" placeholder="numero 1">
+<input class="form-control-sm" type="text" id="num2" placeholder="numero 2">
+<input class="form-control-sm" type="text" id="num3" placeholder="numero 3">
+<p id="ans">Funktio, joka saa kolme argumenttia. <br>
+                          Funktio valitsee suurimman, kertoo sen
+                          toiseksi suurimmalla <br>
+                          ja jakaa ne pienimmällä argumentilla.<br>
+                          Funktio palauttaa tuloksen.</p>
+<button type="button" id="btn" onclick="myFunction()">Laske</button>
+<input class="form-control-sm" type="reset" id="btn">
+<br><br><br><br>
+<!-- <h1>Kymmenen kertotaulu</h1>
+<input type="text" name="addNum" id="addNum"></input>
+<p id ="lasku"></p>
+<button type="button"  onclick="timesLoop()" >Laske</button>
+<br><br><br><br> -->
+<h3>Toteuta funktio, joka saa kaksi merkkijonoa. Funktio vertailee merkkijonojen pituuden ja
+palauttaa pidemmän merkkijonon.</h3>
+<h3>Kirjoita alle kaksi sanaa</h3>
+<input type="text" id="ekaSana">
+<input type="text" id="tokaSana">
+<button type="button" id="btn" onclick="pidempiSana()">Vertaa</button>
+<h3 id="pidempi"></h3>
+ <br>    
+ <br>    
+ <br>    
+ <br>    
+<h3>Toteuta funktio, joka saa merkkijonon (jossa on a kirjaimia). Funktio korvaa kaikki a-kirjaimet
+e-kirjaimilla.</h3>
+<input type="text" id="aKirjain">
+<button id="btn" onclick="korvAaee()">Korvaa</button>
+<h3 id="korvaa"></h3>
+<br>
+<br>
+<br>
+<br>
+<br>
+</form>
+
+<h3>Eri teelaatujen haudutusohjeet</h3>
+<div class="row">
+    <div class="col">
+            <div class="card" style="width: 18rem, 9rem;">
+  <img class="card-img-top" src="https://cdn.pixabay.com/photo/2018/11/07/23/40/white-tea-3801506_960_720.jpg" alt="Card image cap">
+  <div class="card-body bg-dark">
+    <h5 class="card-title" id="white">Valkoisen teen haudutusohje</h5>
+    <button type="button" class="btn btn-light" onclick="whiteTea()">Valkoinen tee</button>
+  </div>
+</div>
+    </div>
+<div class="col">
+    <div class="card" style="width: 18rem,9rem;">
+  <img class="card-img-top" src="https://cdn.pixabay.com/photo/2015/02/04/13/23/tea-623796_960_720.jpg" alt="Card image cap">
+  <div class="card-body bg-dark">
+    <h5 class="card-title" id="green">Vihreän teen haudutusohje</h5>
+<button type="button" class="btn btn-success" onclick="greenTea()">Vihreä tee</button>
+  </div>
+</div>
+</div>
+<div class="col">
+    <div class="card" style="width: 18rem, 9rem;">
+  <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/02/25/18/39/tea-2098455__340.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title text-black-50" id="black">Mustan teen haudutusohje</h5>
+<button type="button" class="btn btn-dark" onclick="blackTea()">Musta tee</button>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</div>
+  <!-- Social media links -->
+  <div class="social__links">
+          <li class=social__link>
+        <a href="https://twitter.com/SamiSihvonen2" target="_blank"><i
+        class="fab fa-twitter fa-2x"></i></a>
+      </li>
+     <li class=social__link>
+        <a href="https://www.instagram.com/saukhos/?hl=fi" target="_blank"><i
+        class="fab fa-instagram fa-2x"></i></a>
+      </li>
+   <li class=social__link>
+        <a href="http://www.linkedin.com/in/sami-sihvonen" target="_blank"><i
+        class="fab fa-linkedin-in fa-2x"></i></a>
+      </li>
+      <li class=social__link>
+        <a href="https://github.com/saukho" target="_blank"><i class="fab
+        fa-github fa-2x"></i></a>
+    </li>
+  </div>
+
+<!-- End of social media links -->
+<h5 class="copy text-center">Sami Sihvonen &copy;</h5>
+</section>
+<script src="scripts/harjoitukset.js"></script>
+ <script src="scripts/time.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery Car, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <!-- stats.js lib -->
+     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

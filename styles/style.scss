@@ -186,43 +186,24 @@ section {
       height: 100vh;
 
       & form {
-        background: #777;
-
-        padding: 5% 7%;
+        padding: 5% 8%;
         max-width: 800px;
         margin: auto;
         margin-top: 5%;
 
-
-
-
-        &>input[type="text"],
-        &>input[type="text"],
-        &>input[type="email"],
-        &>input[type="password"] {
+        & input,
+        & button,
+        & .form-control {
           margin: 0;
-          background-color: $lightgray;
           border: none;
-
-
-          &+label {
-            opacity: 0.5;
-          }
-        }
-
-        &>div {
-          position: relative;
-
-          &>label {
-            opacity: 0.1;
-            position: absolute;
-            top: 10px;
-            left: 25px;
-          }
+          border-radius: 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
+          -o-border-radius: 0;
         }
       }
     }
-
 
     i {
 

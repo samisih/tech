@@ -284,66 +284,36 @@ section#about#contact, section#contact#contact, section#education#contact, secti
 }
 
 section#about#contact form, section#contact#contact form, section#education#contact form, section#gallery#contact form, section#layout#contact form, section#practices#contact form, section#projects#contact form, section#skills#contact form {
-  background: #777;
-  padding: 5% 7%;
+  padding: 5% 8%;
   max-width: 800px;
   margin: auto;
   margin-top: 5%;
 }
 
 section#about#contact form input,
+section#about#contact form button,
 section#about#contact form .form-control, section#contact#contact form input,
+section#contact#contact form button,
 section#contact#contact form .form-control, section#education#contact form input,
+section#education#contact form button,
 section#education#contact form .form-control, section#gallery#contact form input,
+section#gallery#contact form button,
 section#gallery#contact form .form-control, section#layout#contact form input,
+section#layout#contact form button,
 section#layout#contact form .form-control, section#practices#contact form input,
+section#practices#contact form button,
 section#practices#contact form .form-control, section#projects#contact form input,
+section#projects#contact form button,
 section#projects#contact form .form-control, section#skills#contact form input,
+section#skills#contact form button,
 section#skills#contact form .form-control {
   margin: 0;
-  color: #222;
-  background-color: #858585;
   border: none;
-  opacity: 0.8;
-}
-
-section#about#contact form > input[type="text"] + label,
-section#about#contact form > input[type="radio"] + label,
-section#about#contact form > input[type="email"] + label,
-section#about#contact form > input[type="password"] + label, section#contact#contact form > input[type="text"] + label,
-section#contact#contact form > input[type="radio"] + label,
-section#contact#contact form > input[type="email"] + label,
-section#contact#contact form > input[type="password"] + label, section#education#contact form > input[type="text"] + label,
-section#education#contact form > input[type="radio"] + label,
-section#education#contact form > input[type="email"] + label,
-section#education#contact form > input[type="password"] + label, section#gallery#contact form > input[type="text"] + label,
-section#gallery#contact form > input[type="radio"] + label,
-section#gallery#contact form > input[type="email"] + label,
-section#gallery#contact form > input[type="password"] + label, section#layout#contact form > input[type="text"] + label,
-section#layout#contact form > input[type="radio"] + label,
-section#layout#contact form > input[type="email"] + label,
-section#layout#contact form > input[type="password"] + label, section#practices#contact form > input[type="text"] + label,
-section#practices#contact form > input[type="radio"] + label,
-section#practices#contact form > input[type="email"] + label,
-section#practices#contact form > input[type="password"] + label, section#projects#contact form > input[type="text"] + label,
-section#projects#contact form > input[type="radio"] + label,
-section#projects#contact form > input[type="email"] + label,
-section#projects#contact form > input[type="password"] + label, section#skills#contact form > input[type="text"] + label,
-section#skills#contact form > input[type="radio"] + label,
-section#skills#contact form > input[type="email"] + label,
-section#skills#contact form > input[type="password"] + label {
-  opacity: 0.1;
-}
-
-section#about#contact form > div, section#contact#contact form > div, section#education#contact form > div, section#gallery#contact form > div, section#layout#contact form > div, section#practices#contact form > div, section#projects#contact form > div, section#skills#contact form > div {
-  position: relative;
-}
-
-section#about#contact form > div > label, section#contact#contact form > div > label, section#education#contact form > div > label, section#gallery#contact form > div > label, section#layout#contact form > div > label, section#practices#contact form > div > label, section#projects#contact form > div > label, section#skills#contact form > div > label {
-  opacity: 0.3;
-  position: absolute;
-  top: 10px;
-  left: 25px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
 }
 
 section#about i.fab, section#about i.fas, section#contact i.fab, section#contact i.fas, section#education i.fab, section#education i.fas, section#gallery i.fab, section#gallery i.fas, section#layout i.fab, section#layout i.fas, section#practices i.fab, section#practices i.fas, section#projects i.fab, section#projects i.fas, section#skills i.fab, section#skills i.fas {

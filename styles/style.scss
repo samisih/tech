@@ -181,7 +181,7 @@ section {
     }
 
     &#contact {
-      background: #333;
+      background: rgb(170, 170, 170);
       color: black;
       height: 100vh;
 
@@ -192,16 +192,25 @@ section {
         margin-top: 5%;
 
         & input,
-        & button,
         & .form-control {
+          background: rgb(170, 170, 170);
           margin: 0;
           border: none;
+          border-bottom: 1px dotted rgb(85, 85, 85);
           border-radius: 0;
           -webkit-border-radius: 0;
           -moz-border-radius: 0;
           -ms-border-radius: 0;
           -o-border-radius: 0;
         }
+
+        & .btn {        
+            margin-top: 1rem;
+          &-danger {
+            background-color: red;
+          }
+        }
+
       }
     }
 
@@ -218,6 +227,7 @@ section {
       background: $black;
 
       & .img-fluid {
+
         &:hover {
           transform: scale(1.1);
           -webkit-transform: scale(1.1);
@@ -241,6 +251,10 @@ section {
         margin: auto;
         width: 40%;
       }
+    }
+
+    &#skills {
+      height: 100% !important;
     }
 
     .tb-5 {

@@ -1,296 +1,282 @@
 @import 'variables';
+@import 'keyframes';
 
 section {
-    background-color: $body-bg;
+  background-color: $body-bg;
 
+  & .social__links {
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    display: flex;
+    gap: 8px;
+    list-style-type: none;
 
-    &#about {
-        height: 100vh;
-        background-color: $black;
-        overflow-x: hidden;
-
-        & .jumbotron {
-            height: 80%;
-            background-color: $body-bg;
-
-            & .btn {
-                margin-top: 5%;
-            }
-
-        }
+    & i {
+      color: $white;
+      margin: 2%;
     }
 
+    & a {
+      cursor: pointer;
+      font-family: $headerRusso;
+      font-size: 100%;
+
+      &:link {
+        color: $white;
+        color: rgb(130, 130, 130);
+      }
+
+      &:visited {
+        color: rgb(27, 116, 128);
+      }
+
+      &:hover {
+        text-shadow: rgb(27, 122, 126) 3px 3px 2px;
+      }
+    }
+  }
+
+  &#about,
+  &#contact,
+  &#education,
+  &#gallery,
+  &#layout,
+  &#practices,
+  &#projects,
+  &#skills {
+    color: $white;
+    background-color: $body-bg;
+    width: 100vw;
+
+    & nav {
+      position: static;
+      flex: 1;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    & #typedtext {
+      font-family: $headerRusso;
+      text-shadow: $black 2px 1px 3px;
+      font-size: 160%;
+      position: absolute;
+      z-index: -1;
+      top: 35%;
+      left: 10%;
+    }
+
+    & #main__image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0.3;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    & .bg-black {
+      background: $black;
+    }
+
+    & p#demo {
+      background-color: grey;
+      color: blanchedalmond;
+      text-align: center;
+      padding: 2% 1%;
+      margin: 2% 30%;
+    }
+
+    & .slide-left {
+      animation-duration: 5s;
+      animation-name: slide-left;
+      animation-iteration-count: ease;
+      animation-direction: alternate;
+    }
+
+    & .slide-right {
+      animation-duration: 5s;
+      animation-name: slide-right;
+      animation-iteration-count: ease-in;
+      animation-direction: alternate;
+    }
+
+    & .lucidout {
+      animation-duration: 7s;
+      animation-name: lucidout;
+      animation-iteration-count: ease;
+      animation-direction: alternate;
+    }
+
+    .breadcrumb {
+      background-color: inherit;
+      font-family: $textSyne;
+      font-size: 130%;
+
+      & .breadcrumb-item {
+        & a {
+          color: $white;
+          font-family: $textSyne;
+
+          &:active {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    &#about {
+      height: 100vh;
+      background-color: $black;
+      overflow-y: hidden;
+
+      & .jumbotron {
+        height: 100%;
+        background-color: $body-bg;
+
+        & img {
+          top: 20%;
+          left: 5%;
+          max-width: 100%;
+        }
+
+        & .btn {
+          background-color: $green;
+          color: #000;
+          margin-top: 5%;
+        }
+      }
+    }
 
     &#gallery {
-        height: 100vh;
+      height: 100vh;
 
+      & .carousel-inner {
+        height: 85vh;
+        object-fit: contain;
+        max-width: 100%;
+      }
 
+      & .carousel-item {
+        height: 100%;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
 
-        & .carousel-inner {
-            height: 85vh;
-            object-fit: contain;
-            max-width: 100%;
-        }
-
-        & .carousel-item {
-            height: 100%;
-            background: no-repeat center center scroll;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-
-        & .h3-responsive {
-            position: sticky;
-
-            left: 40%;
-            bottom: 105%;
-            color: $white;
-            text-shadow: 12px 4px 7px $black;
-
-        }
-
-
+      & .h3-responsive {
+        position: sticky;
+        left: 40%;
+        bottom: 105%;
+        color: $white;
+        text-shadow: 12px 4px 7px $black;
+      }
     }
 
     &#contact {
-        height: 100vh;
+      height: 100vh;
 
-        & form {
-            width: 30%;
-            margin: auto;
+      & .card {
+        width: 80%;
+        margin: auto;
+      }
 
+      & .form-control {
+        width: 100%;
+
+        & .input-group {
+          width:80%;
         }
+      }
 
-
+      & nav {
+        background-color: black;
+      }
     }
 
     i {
-
-        &.fab,
-        &.fas {
-            font-size: 300%;
-        }
+      &.fab,
+      &.fas {
+        font-size: 300%;
+      }
     }
 
     &#projects {
-        width: 100%;
+      height: 100vh;
 
-        & .img-fluid {
-            &:hover {
-                transform: scale(1.1);
-                -webkit-transform: scale(1.1);
-                -moz-transform: scale(1.1);
-                -ms-transform: scale(1.1);
-                -o-transform: scale(1.1);
-                opacity: 0.8;
-            }
+      & .img-fluid {
+        &:hover {
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          opacity: 0.8;
         }
+      }
 
-        & .jumbotron {
-            padding: 16%;
-        }
-
-
+      & .jumbotron {
+        padding: 16%;
+      }
     }
 
     &#education {
-        height: 100vh;
+      height: 100vh;
     }
 
-    &#layout,
-    &#about,
-    &#gallery,
-    &#projects,
-    &#contact,
-    &#education,
-    &#skills {
-        color: $white;
-        background-color: $body-bg;
-        /*         text-transform: uppercase; */
-        width: 100vw;
+    &#practices {
+      padding: 0 5%;
+      text-align: center;
 
-        & #typedtext {
-            font-family: $headerRusso;
-            text-shadow: $black 2px 1px 3px;
-            font-size: 160%;
-            position: absolute;
-            z-index: -1;
-            top: 35%;
-            left: 10%;
-        }
-
-        & #main__image {
-            position: absolute;
-            top: 0;
-            right: 0;
-            opacity: 0.3;
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-        }
-
-
-        & .social__links {
-            position: absolute;
-            flex-direction: row;
-            width: 215px;
-            grid-gap: 5%;
-            right: 5%;
-            top: 12%;
-            list-style-type: none;
-            display: flex;
-
-            & i {
-                color: $white;
-                margin: 2%;
-            }
-
-            & a {
-                cursor: pointer;
-                font-family: $headerRusso;
-                font-size: 100%;
-
-
-
-
-                &:link {
-                    color: $white;
-                    color: rgb(130, 130, 130);
-                }
-
-                &:visited {
-                    color: rgb(27, 116, 128);
-                }
-
-                &:hover {
-                    text-shadow: rgb(27, 122, 126) 3px 3px 2px
-                }
-            }
-        }
-
-        & .bg-black {
-            background: $black;
-        }
-
-        & p#demo {
-            background-color: grey;
-            color: blanchedalmond;
-            display: inline-table;
-            width: 35%;
-        }
-
-        & .slide-left {
-            animation-duration: 5s;
-            animation-name: slide-left;
-            animation-iteration-count: ease;
-            animation-direction: alternate;
-        }
-
-        & .slide-right {
-            animation-duration: 5s;
-            animation-name: slide-right;
-            animation-iteration-count: ease-in;
-            animation-direction: alternate;
-        }
-
-        & .lucidout {
-            animation-duration: 7s;
-            animation-name: lucidout;
-            animation-iteration-count: ease;
-            animation-direction: alternate;
-        }
-
-        .breadcrumb {
-            background-color: inherit;
-            font-family: $textSyne;
-            font-size: 130%;
-
-
-            & .breadcrumb-item {
-                & a {
-                    color: $white;
-                    font-family: $textSyne;
-
-                    &:active {
-                        color: $blue;
-                    }
-                }
-            }
-        }
-
-        .copy {
-            position: relative;
-            bottom: 0;
-        }
-
-
-        #myVideo {
-            background-attachment: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100vw;
-            background-position: center;
-            object-fit: cover;
-            z-index: -1;
-            position: absolute;
-            filter: brightness(25%);
-            -webkit-filter: brightness(25%);
-
-            &:after {
-                content: '';
-                z-index: 1;
-                position: relative;
-            }
-        }
+      & button,
+      & input {
+        margin: auto;
+        width: 40%;
+      }
     }
 
-
-
-
-
-
-    @keyframes slide-left {
-        0% {
-            opacity: 0;
-            margin-left: 20%;
-        }
-
-        100% {
-            margin-left: 0%;
-
-        }
-
+    .copy {
+      position: relative;
+      bottom: 0;
     }
 
-    @keyframes slide-right {
-        0% {
-            opacity: 0;
-            left: -500px;
-            margin-right: 100%;
-        }
-
-        100% {
-            opacity: 1;
-            margin-right: 0%;
-
-        }
-
+    .tb-5 {
+      margin: 5% 0;
     }
 
-    @keyframes lucidout {
-        0% {
-            opacity: 0;
-
-        }
-
-        100% {
-            opacity: 0.93;
-
-        }
-
+    .tb-15 {
+      margin: 15% 0;
     }
+
+    .tb-25 {
+      margin: 25% 0;
+    }
+
+    .tb-35 {
+      margin: 35% 0;
+    }
+
+    #myVideo {
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100vw;
+      background-position: center;
+      object-fit: cover;
+      z-index: -1;
+      position: absolute;
+      filter: brightness(25%);
+      -webkit-filter: brightness(25%);
+
+      &:after {
+        content: '';
+        z-index: 1;
+        position: relative;
+      }
+    }
+  }
 }

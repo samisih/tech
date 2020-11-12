@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>My Projects</title>
+</head>
+<section id="practices">
+
+
+  <!-- BreadCrumb -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="about.html">About</a></li>
+      <li class="breadcrumb-item"><a href="education.html">Education</a></li>
+      <li class="breadcrumb-item" aria-current="projects.html" active>Projects</a></li>
+      <li class="breadcrumb-item"><a href="gallery.html">Gallery</a></li>
+      <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
+    </ol>
+  </nav>
+  <!-- /BreadCrumb -->
+
+
+  <!-- Jumbotron -->
+  <div class="card container text-center text-white bg-dark">
+    <h3 class="display-5 mt-5 slide-left" id="#">JavaScript Harjoituksia</h3>
+    <p class="lead mt-5">
+      Taitotalon JavaScript-kurssin harjoitukset</p>
+    <!-- ITSE MODIFIOITU KELLO JA PÄIVÄMÄÄRÄ -->
+    <div id="time"></div>
+  </div>
+  <div class="tb-5"></div>
+  <!-- /Jumbotron -->
+  <div class="container">
+    <div class="card bg-dark p-3">
+      <form class="text-success">
+        <!-- Sinun nimesi on -->
+        <h2>Sinun nimesi</h2>
+        <label>Nimi</label>
+        <input id="myText" type="text" />
+        <p id="name">Sinun nimesi on: </p>
+        <button type="button" class="btn-outline-success" onclick="sinunNimesi()">Paina</button>
+    </div>
+    <div class="tb-5"></div>
+    <!-- FUNKTIO ARPOO NUMERON NOLLAN JA ANNETUN NUMERON VÄLILTÄ, FUNTIO PALAUTTAA NUMERON -->
+    <div class="tb-5"></div>
+
+    <div class="card bg-dark p-3">
+      <!-- FUNKTIO NELJÄ ARGUMENTTIA -->
+      <h1>Anna neljä numeroa</h1>
+      <input type="text" name="miinus" id="eka">
+      <input type="text" name="miinus" id="toka">
+      <input type="text" name="miinus" id="kolmas">
+      <input type="text" name="miinus" id="neljas">
+      <button type="button" class="btn-outline-success" onclick="miinusta()">Laske</button>
+      <p id="miinus">Neljän numeron miinuslaskun tulos:</p>
+    </div>
+    <br><br><br><br>
+    <div class="card bg-dark p-3">
+      <!-- KUINKA MONTA KIRJAINTA -->
+      <h3>Kuinka monta kertaa annettu kirjain esiintyy
+        merkkijonossa? Tulostus muotoa ”Kirjain a esiintyy merkkijonossa ’Kuinka kaipaankaan
+        kissaa?’ 8 kertaa.”
+      </h3>
+      <br>
+      <h4>Kirjoita alle jokin lause:</h4>
+      <input type="text" name="addNum" id="annettuLause">
+      <button type="button" class="btn-outline-success" onclick="laskeKirjaimia()">Laske</button>
+      <p id="kirjaimet">Löydettyjen Aa-kirjainten määrä</p>
+    </div>
+    <br><br><br><br>
+    <div class="card bg-dark p-3">
+      <!--KOLMEN NUMERON YHTEENLASKU -->
+      <h1>Kolmen numeron yhteenlasku</h1>
+      <input type="text" name="addNum" id="addFirstNum">
+      <input type="text" name="addNum" id="addSecondNum">
+      <input type="text" name="addNum" id="addThirdNum">
+      <button type="button" class="btn-outline-success" onclick="countNums()">Laske</button>
+      <p id="count">Kolmen numeron yhteenlaskun tulos:</p>
+    </div>
+    <br><br><br><br>
+    <!-- JAVASCRIPT ON PARASTA IKINÄ -->
+    <button type="button" class="btn-outline-success" onclick="jaavaSkripti()">Mitä JavaScript on?</button>
+    <h4 id="best"></h4>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card bg-dark p-3">
+      <!-- Harjoitus 5. HTML + JS -->
+      <h1>Harjoitus 5 teksti ja numero</h1>
+      <h4>Anna sana ja numero</h4>
+      <input type="text" name="addNum" id="word">
+      <input type="text" name="addNum" id="number">
+      <button type="button" class="btn-outline-success" onclick="valueCounter()" id="btn">Paina</button>
+      <br>
+      <p id="tulos"></p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <div class="card bg-dark p-3">
+      <h3 class="display-5">Uutta Harjoitusta
+        <br>
+        FUNKTIO ARPOO NUMERON NOLLAN JA ANNETUN NUMERON VÄLILTÄ, FUNKTIO PALAUTTAA NUMERON
+      </h3>
+      <br>
+      <h2>Numero Lotto: Anna jokin numero</h2>
+      <input class="form-control-sm" type="text" id="num">
+      <p id="text">Funktio arpoo annetun numeron ja nollan väliltä luvun</p>
+      <button type="button" id="btn" class="btn-outline-success" onclick="arpooLuvun()">Arvo numero</button>
+      <p id="demo" class="text-center">Arvottu Luku : </p>
+    </div>
+    <br><br><br><br>
+    <!-- UUTTA HARJOITUSTA TEHTÄVÄ 2. KOLME NUMEROA -->
+    <div class="card bg-dark p-3">
+      <h2>Anna kolme numeroa</h2>
+      <input class="form-control-sm" type="text" id="num1" placeholder="numero 1">
+      <input class="form-control-sm" type="text" id="num2" placeholder="numero 2">
+      <input class="form-control-sm" type="text" id="num3" placeholder="numero 3">
+      <p id="ans">Funktio, joka saa kolme argumenttia. <br>
+        Funktio valitsee suurimman, kertoo sen
+        toiseksi suurimmalla <br>
+        ja jakaa ne pienimmällä argumentilla.<br>
+        Funktio palauttaa tuloksen.</p>
+      <button type="button" id="btn" class="btn-outline-success" onclick="myFunction()">Laske</button>
+      <input class="form-control-sm" type="reset" id="btn">
+    </div>
+    <br><br><br><br>
+    <!-- <h1>Kymmenen kertotaulu</h1>
+<input type="text" name="addNum" id="addNum"></input>
+<p id ="lasku"></p>
+<button type="button"  onclick="timesLoop()" >Laske</button>
+<br><br><br><br> -->
+    <div class="card bg-dark p-3">
+      <h3>Toteuta funktio, joka saa kaksi merkkijonoa. Funktio vertailee merkkijonojen pituuden ja
+        palauttaa pidemmän merkkijonon.</h3>
+      <h3>Kirjoita alle kaksi sanaa</h3>
+      <input type="text" id="ekaSana">
+      <input type="text" id="tokaSana">
+      <button type="button" id="btn" class="btn-outline-success" onclick="pidempiSana()">Vertaa</button>
+      <h3 id="pidempi"></h3>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card bg-dark p-3">
+      <h3>Toteuta funktio, joka saa merkkijonon (jossa on a kirjaimia). Funktio korvaa kaikki a-kirjaimet
+        e-kirjaimilla.</h3>
+      <input type="text" id="aKirjain">
+      <button id="btn" class="btn-outline-success" onclick="korvAaee()">Korvaa</button>
+      <h3 id="korvaa"></h3>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </form>
+    <div class="card bg-dark p-3">
+      <h3>Eri teelaatujen haudutusohjeet</h3>
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem, 9rem;">
+            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2018/11/07/23/40/white-tea-3801506_960_720.jpg" alt="Card image cap">
+            <div class="card-body bg-dark">
+              <h5 class="card-title" id="white">Valkoisen teen haudutusohje</h5>
+              <button type="button" class="btn btn-light" onclick="whiteTea()">Valkoinen tee</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem,9rem;">
+            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2015/02/04/13/23/tea-623796_960_720.jpg" alt="Card image cap">
+            <div class="card-body bg-dark">
+              <h5 class="card-title" id="green">Vihreän teen haudutusohje</h5>
+              <button type="button" class="btn btn-success" onclick="greenTea()">Vihreä tee</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem, 9rem;">
+            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/02/25/18/39/tea-2098455__340.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title text-black-50" id="black">Mustan teen haudutusohje</h5>
+              <button type="button" class="btn-outline-success" onclick="blackTea()">Musta tee</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card bg-dark p-3">
+      <h1>Harjoitus 5 teksti ja numero</h1>
+      <h4>Anna sana ja numero</h4>
+      <input type="text" id="word">
+      <input type="number" id="number">
+      <button type="button" onclick="valueCounter()" id="btn">Paina</button>
+      <br>
+      <p id="tulos" class="nappi"></p>
+    </div>
+    <div class="card bg-dark p-3">
+      <h1>Värinvaihto</h1>
+      <h4>Anna numero</h4>
+      <input type="text" id="first">
+      <button type="button" onclick="variVaihto()">Paina</button>
+      <br>
+      <p id="print"></p>
+    </div>
+
+  </div>
+
+  <h5 class="copy text-center">Sami Sihvonen &copy;</h5>
+</section>
+<script src="scripts/harjoitukset.js"></script>
+<script src="scripts/time.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery Car, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+</script>
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+</body>
+
+</html>

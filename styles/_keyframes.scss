@@ -1,4 +1,4 @@
-@media screen and (min-width: 360px) and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 768px) {
   section {
     height: 100%;
 
@@ -13,9 +13,33 @@
         font-size: 180%;
       }
 
+      & img {
+        margin-top: 20%;
+      }
+
       & .lead {
         width: 100%;
       }
+    }
+
+    &#projects {
+      height: 100% !important;
+    }
+
+    &#education {
+      height: 100% !important;
+    }
+
+    &#contact {
+      padding-top: 2%;
+
+      & form {
+        position: absolute;
+        top: 18%;
+        left: 14%;
+      }
+
+
     }
   }
 

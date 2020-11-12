@@ -1,0 +1,124 @@
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  section {
+    height: 100%;
+
+    &#contact {}
+
+    &#about {
+      height: 100% !important;
+      background: $black;
+
+      & .display-4 {
+        margin-top: 20%;
+        font-size: 180%;
+      }
+
+      & img {
+        margin-top: 20%;
+      }
+
+      & .lead {
+        width: 100%;
+      }
+    }
+
+    &#projects {
+      height: 100% !important;
+    }
+
+    &#education {
+      height: 100% !important;
+    }
+
+    &#contact {
+      padding-top: 2%;
+
+      & form {
+        position: absolute;
+        top: 18%;
+        left: 14%;
+      }
+
+
+    }
+  }
+
+  &.social-links {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1408px) {
+  section {
+    width: 100%;
+
+    &#contact {
+      & .form-group {
+        width: 120%;
+      }
+    }
+
+    &#about {
+      height: 100%;
+
+      & img {
+        top: 0;
+        left: 5%;
+
+        &#about {
+          & img {
+            top: 0;
+            transform: scale(1.5);
+            width: 200%;
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+          }
+        }
+
+        ;
+        transform: scale(1.5);
+        width: 200%;
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+      }
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    right: -300px;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    left: -500px;
+    margin-right: 100%;
+  }
+
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+@keyframes lucidout {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.93;
+  }
+}

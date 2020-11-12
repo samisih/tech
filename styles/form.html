@@ -28,40 +28,39 @@
   <!-- /BreadCrumb -->
 
   <!-- Jumbotron -->
+  <div class="card">
+    <form action="#0" method="post">
 
-    <form id="form" action="#" method=" ">
-       <h5 class="text-center" id="">
-           Please fill all areas</h5>
     <div>
-      <input type="text" id="first_name" name="first_name"   placeholder="name" class="form-control form-text"required maxlength="25" required>
-
+      <input type="text" id="first_name" name="first_name"  class="form-control form-text"required maxlength="25" required>
+      <label for="first_name">First Name</label>
     </div>
       <div>
-      <input type="text" id="last_name"class="form-control form-text" placeholder="lastname" required maxlength="25" required>
-
+      <input type="text" id="last_name"class="form-control form-text" required maxlength="25" required>
+        <label for="last_name">Last Name</label>
       </div>
       <div>
-      <input type="text" id="email"class="form-control form-text" placeholder="email" required maxlength="25" required>
-
+      <input type="text" id="email"class="form-control form-text" required maxlength="25" required>
+        <label for="email">Email</label>
       </div>
       <div>
-        <div class="form-control">
+        <div class="form-group">
 
           <input type="radio" name="gender" id="gender" required>
           <label for="gender">Male</label>
 
             <input type="radio" name="gender" id="gender" required>
-          <label for="gender">Female</label>
+            <label for="gender">Female</label>
 
             <input type="radio" name="gender" id="gender" required>
             <label for="gender">Other</label>
         </div>
       </div>
       <div>
-        <input type="text" id="age"class="form-control form-text" placeholder="age" required minlength="1" maxlength="2">
-
+        <input type="number" id="age"class="form-control form-text" required minlength="1" maxlength="2">
+          <label for="age">Age</label>
       </div>
-      <div>
+      <div class="form-group">
         <div class="dropdown">
           <button class="btn btn-secondary btn-lg dropdown-toggle form-control" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" required>
             Location
@@ -75,24 +74,23 @@
 
       <div>
             <input type="text" id="website" placeholder="Website URL" class="form-control form-text" required maxlength="50" required>
-
+            <label for="website" id="website"></label>
         </div>
       </div>
 
         <div>
-            <input type="text" id="website" placeholder="Place Comment" class="form-control form-text" required maxlength="255" required oninvalid="alert('You must fill out the form!');">
-
+            <input type="text" id="website" placeholder="Place Comment" class="form-control form-text" required maxlength="255" required>
+        <label for="comment" id="comment"></label>
       </div>
-      <div><div class="row">
-        <div class="col">
-        <input type="reset" id="btn" class="btn btn-danger w-100 btn-lg" placeholder="reset"></div>
-        <div class="col"> <input type="submit" id="btn" class="btn bg-success  w-100 text-white btn-lg" onclick="validForm()" placeholder="send" href="mailto:someone@example.com" method="post" enctype="text/plain" role="button" ></div>
-      </div>       
+      <div>
+        <input type="reset" id="btn" class="btn btn-danger btn-lg" placeholder="reset">
+        <input type="submit" id="btn" class="btn bg-black text-white btn-lg " placeholder="send" href="mailto:someone@example.com" method="post" enctype="text/plain" role="button" onclick="return Validate()">
       </div>
   </form>
 
 
-
+  </div>
+  <!-- /Jumbotron -->
 
 
 
@@ -101,6 +99,9 @@
   <div class="social__links">
     <li class=social__link>
       <a href="https://twitter.com/SamiSihvonen2" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+    </li>
+    <li class=social__link>
+      <a href="https://www.instagram.com/saukhos/?hl=fi" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
     </li>
     <li class=social__link>
       <a href="http://www.linkedin.com/in/sami-sihvonen" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
@@ -114,15 +115,9 @@
   </nav>
   </nav>
   </div>
-  <h5 class="copy fixed-bottom text-center">Sami Sihvonen &copy;</h5>
+  <h5 class="copy text-center">Sami Sihvonen &copy;</h5>
 </section>
-<script type="text/javascript">
 
-function validForm(){
-    document.querySelector("form").style.backgroundColor= "pink";
-}
-
-</script>
 <!-- Optional JavaScript -->
 <!-- jQuery Car, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

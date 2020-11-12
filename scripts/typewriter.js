@@ -1,7 +1,5 @@
 var aText = new Array(
-    "I am Frontend developer",
-    "UX/UI desinger",
-    "Photographer"  
+    "I am Frontend developer"    
 );
 var iSpeed = 100; // time delay of print out
 var iIndex = 0; // start printing array at this posision

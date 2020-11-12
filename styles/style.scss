@@ -2,7 +2,7 @@
 @import 'keyframes';
 
 section {
-  background-color: $body-bg;
+  background-color: $black;
 
   & .social__links {
     position: absolute;
@@ -46,8 +46,8 @@ section {
   &#projects,
   &#skills {
     color: $white;
-    background-color: $body-bg;
-    width: 100vw;
+    background-color: $black;
+    width: 100%;
 
     & nav {
       position: static;
@@ -60,10 +60,10 @@ section {
     & #typedtext {
       font-family: $headerRusso;
       text-shadow: $black 2px 1px 3px;
-      font-size: 160%;
+      font-size: 260%;
       position: absolute;
       z-index: -1;
-      top: 35%;
+      top: 65%;
       left: 10%;
     }
 
@@ -114,6 +114,7 @@ section {
       background-color: inherit;
       font-family: $textSyne;
       font-size: 130%;
+      z-index: 4;
 
       & .breadcrumb-item {
         & a {
@@ -134,11 +135,12 @@ section {
 
       & .jumbotron {
         height: 100%;
-        background-color: $body-bg;
+        background-color: $black;
 
         & img {
-          top: 20%;
-          left: 5%;
+          top: 2%;
+          left: 15%;
+          width: 60%;
           max-width: 100%;
         }
 
@@ -178,27 +180,43 @@ section {
     }
 
     &#contact {
+      background: #333;
+      color: black;
       height: 100vh;
 
-      & .card {
-        width: 80%;
+      & form {
+        background: #777;
+        padding: 5%;
+        max-width: 600px;
         margin: auto;
-      }
 
-      & .form-control {
-        width: 100%;
+        &>input[type="text"],
+        &>input[type="email"],
+        &>input[type="password"] {
 
-        & .input-group {
-          width:80%;
+
+
+          &+label {
+            opacity: 0.5;
+          }
+        }
+
+        &>div {
+          position: relative;
+
+          &>label {
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 25px;
+          }
         }
       }
 
-      & nav {
-        background-color: black;
-      }
     }
 
     i {
+
       &.fab,
       &.fas {
         font-size: 300%;
@@ -240,8 +258,9 @@ section {
     }
 
     .copy {
-      position: relative;
+      position: absolute;
       bottom: 0;
+      left: 45%
     }
 
     .tb-5 {

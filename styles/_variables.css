@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Luckiest+Guy&family=Russo+One&family=Special+Elite&family=Syne+Mono&display=swap");
+/* * {
+    border: 1px white solid;
+}
+ */
+/*Text Colors */
+body {
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*# sourceMappingURL=_variables.css.map */

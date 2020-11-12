@@ -3,7 +3,6 @@
     border: 1px white solid;
 }
  */
-/*Text Colors */
 body {
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -11,24 +10,34 @@ body {
 }
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
+  section {
+    height: 100%;
+  }
+  section#about {
+    height: 100% !important;
+    background: #000;
+  }
   section#about .display-4 {
+    margin-top: 20%;
     font-size: 180%;
   }
-  section#about .img-fluid {
-    top: 0;
-    left: 5;
-    transform: scale(1.5);
-    width: 200%;
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
+  section#about .lead {
+    width: 100%;
+  }
+  .social-links {
+    position: relative;
   }
 }
 
 @media screen and (min-width: 760px) and (max-width: 1408px) {
+  section {
+    width: 100%;
+  }
   section#contact .form-group {
     width: 120%;
+  }
+  section#about {
+    height: 100%;
   }
   section#about img {
     top: 0;
@@ -69,7 +78,7 @@ body {
   }
   100% {
     opacity: 1;
-    margin-right: 0%;
+    margin-right: 0;
   }
 }
 
@@ -83,7 +92,7 @@ body {
 }
 
 section {
-  background-color: black;
+  background-color: #000;
 }
 
 section .social__links {
@@ -119,13 +128,13 @@ section .social__links a:hover {
   text-shadow: #1b7a7e 3px 3px 2px;
 }
 
-section#layout, section#about, section#gallery, section#projects, section#contact, section#education, section#skills, section#practices {
+section#about, section#contact, section#education, section#gallery, section#layout, section#practices, section#projects, section#skills {
   color: #fff;
-  background-color: black;
-  width: 100vw;
+  background-color: #000;
+  width: 100%;
 }
 
-section#layout nav, section#about nav, section#gallery nav, section#projects nav, section#contact nav, section#education nav, section#skills nav, section#practices nav {
+section#about nav, section#contact nav, section#education nav, section#gallery nav, section#layout nav, section#practices nav, section#projects nav, section#skills nav {
   position: static;
   flex: 1;
   top: 0;
@@ -133,17 +142,17 @@ section#layout nav, section#about nav, section#gallery nav, section#projects nav
   z-index: 2;
 }
 
-section#layout #typedtext, section#about #typedtext, section#gallery #typedtext, section#projects #typedtext, section#contact #typedtext, section#education #typedtext, section#skills #typedtext, section#practices #typedtext {
+section#about #typedtext, section#contact #typedtext, section#education #typedtext, section#gallery #typedtext, section#layout #typedtext, section#practices #typedtext, section#projects #typedtext, section#skills #typedtext {
   font-family: "Russo One", sans-serif;
   text-shadow: #000 2px 1px 3px;
-  font-size: 160%;
+  font-size: 260%;
   position: absolute;
   z-index: -1;
-  top: 35%;
+  top: 65%;
   left: 10%;
 }
 
-section#layout #main__image, section#about #main__image, section#gallery #main__image, section#projects #main__image, section#contact #main__image, section#education #main__image, section#skills #main__image, section#practices #main__image {
+section#about #main__image, section#contact #main__image, section#education #main__image, section#gallery #main__image, section#layout #main__image, section#practices #main__image, section#projects #main__image, section#skills #main__image {
   position: absolute;
   top: 0;
   right: 0;
@@ -153,11 +162,11 @@ section#layout #main__image, section#about #main__image, section#gallery #main__
   object-fit: cover;
 }
 
-section#layout .bg-black, section#about .bg-black, section#gallery .bg-black, section#projects .bg-black, section#contact .bg-black, section#education .bg-black, section#skills .bg-black, section#practices .bg-black {
+section#about .bg-black, section#contact .bg-black, section#education .bg-black, section#gallery .bg-black, section#layout .bg-black, section#practices .bg-black, section#projects .bg-black, section#skills .bg-black {
   background: #000;
 }
 
-section#layout p#demo, section#about p#demo, section#gallery p#demo, section#projects p#demo, section#contact p#demo, section#education p#demo, section#skills p#demo, section#practices p#demo {
+section#about p#demo, section#contact p#demo, section#education p#demo, section#gallery p#demo, section#layout p#demo, section#practices p#demo, section#projects p#demo, section#skills p#demo {
   background-color: grey;
   color: blanchedalmond;
   text-align: center;
@@ -165,82 +174,84 @@ section#layout p#demo, section#about p#demo, section#gallery p#demo, section#pro
   margin: 2% 30%;
 }
 
-section#layout .slide-left, section#about .slide-left, section#gallery .slide-left, section#projects .slide-left, section#contact .slide-left, section#education .slide-left, section#skills .slide-left, section#practices .slide-left {
+section#about .slide-left, section#contact .slide-left, section#education .slide-left, section#gallery .slide-left, section#layout .slide-left, section#practices .slide-left, section#projects .slide-left, section#skills .slide-left {
   animation-duration: 5s;
   animation-name: slide-left;
   animation-iteration-count: ease;
   animation-direction: alternate;
 }
 
-section#layout .slide-right, section#about .slide-right, section#gallery .slide-right, section#projects .slide-right, section#contact .slide-right, section#education .slide-right, section#skills .slide-right, section#practices .slide-right {
+section#about .slide-right, section#contact .slide-right, section#education .slide-right, section#gallery .slide-right, section#layout .slide-right, section#practices .slide-right, section#projects .slide-right, section#skills .slide-right {
   animation-duration: 5s;
   animation-name: slide-right;
   animation-iteration-count: ease-in;
   animation-direction: alternate;
 }
 
-section#layout .lucidout, section#about .lucidout, section#gallery .lucidout, section#projects .lucidout, section#contact .lucidout, section#education .lucidout, section#skills .lucidout, section#practices .lucidout {
+section#about .lucidout, section#contact .lucidout, section#education .lucidout, section#gallery .lucidout, section#layout .lucidout, section#practices .lucidout, section#projects .lucidout, section#skills .lucidout {
   animation-duration: 7s;
   animation-name: lucidout;
   animation-iteration-count: ease;
   animation-direction: alternate;
 }
 
-section#layout .breadcrumb, section#about .breadcrumb, section#gallery .breadcrumb, section#projects .breadcrumb, section#contact .breadcrumb, section#education .breadcrumb, section#skills .breadcrumb, section#practices .breadcrumb {
+section#about .breadcrumb, section#contact .breadcrumb, section#education .breadcrumb, section#gallery .breadcrumb, section#layout .breadcrumb, section#practices .breadcrumb, section#projects .breadcrumb, section#skills .breadcrumb {
   background-color: inherit;
   font-family: "Syne mono", monospace;
   font-size: 130%;
+  z-index: 4;
 }
 
-section#layout .breadcrumb .breadcrumb-item a, section#about .breadcrumb .breadcrumb-item a, section#gallery .breadcrumb .breadcrumb-item a, section#projects .breadcrumb .breadcrumb-item a, section#contact .breadcrumb .breadcrumb-item a, section#education .breadcrumb .breadcrumb-item a, section#skills .breadcrumb .breadcrumb-item a, section#practices .breadcrumb .breadcrumb-item a {
+section#about .breadcrumb .breadcrumb-item a, section#contact .breadcrumb .breadcrumb-item a, section#education .breadcrumb .breadcrumb-item a, section#gallery .breadcrumb .breadcrumb-item a, section#layout .breadcrumb .breadcrumb-item a, section#practices .breadcrumb .breadcrumb-item a, section#projects .breadcrumb .breadcrumb-item a, section#skills .breadcrumb .breadcrumb-item a {
   color: #fff;
   font-family: "Syne mono", monospace;
 }
 
-section#layout .breadcrumb .breadcrumb-item a:active, section#about .breadcrumb .breadcrumb-item a:active, section#gallery .breadcrumb .breadcrumb-item a:active, section#projects .breadcrumb .breadcrumb-item a:active, section#contact .breadcrumb .breadcrumb-item a:active, section#education .breadcrumb .breadcrumb-item a:active, section#skills .breadcrumb .breadcrumb-item a:active, section#practices .breadcrumb .breadcrumb-item a:active {
+section#about .breadcrumb .breadcrumb-item a:active, section#contact .breadcrumb .breadcrumb-item a:active, section#education .breadcrumb .breadcrumb-item a:active, section#gallery .breadcrumb .breadcrumb-item a:active, section#layout .breadcrumb .breadcrumb-item a:active, section#practices .breadcrumb .breadcrumb-item a:active, section#projects .breadcrumb .breadcrumb-item a:active, section#skills .breadcrumb .breadcrumb-item a:active {
   color: blue;
 }
 
-section#layout#about, section#about#about, section#gallery#about, section#projects#about, section#contact#about, section#education#about, section#skills#about, section#practices#about {
+section#about#about, section#contact#about, section#education#about, section#gallery#about, section#layout#about, section#practices#about, section#projects#about, section#skills#about {
   height: 100vh;
   background-color: #000;
   overflow-y: hidden;
 }
 
-section#layout#about .jumbotron, section#about#about .jumbotron, section#gallery#about .jumbotron, section#projects#about .jumbotron, section#contact#about .jumbotron, section#education#about .jumbotron, section#skills#about .jumbotron, section#practices#about .jumbotron {
+section#about#about .jumbotron, section#contact#about .jumbotron, section#education#about .jumbotron, section#gallery#about .jumbotron, section#layout#about .jumbotron, section#practices#about .jumbotron, section#projects#about .jumbotron, section#skills#about .jumbotron {
   height: 100%;
-  background-color: black;
+  background-color: #000;
 }
 
-section#layout#about .jumbotron img, section#about#about .jumbotron img, section#gallery#about .jumbotron img, section#projects#about .jumbotron img, section#contact#about .jumbotron img, section#education#about .jumbotron img, section#skills#about .jumbotron img, section#practices#about .jumbotron img {
-  top: 20%;
-  left: 5%;
+section#about#about .jumbotron img, section#contact#about .jumbotron img, section#education#about .jumbotron img, section#gallery#about .jumbotron img, section#layout#about .jumbotron img, section#practices#about .jumbotron img, section#projects#about .jumbotron img, section#skills#about .jumbotron img {
+  top: 2%;
+  left: 15%;
+  width: 60%;
   max-width: 100%;
 }
 
-section#layout#about .jumbotron .btn, section#about#about .jumbotron .btn, section#gallery#about .jumbotron .btn, section#projects#about .jumbotron .btn, section#contact#about .jumbotron .btn, section#education#about .jumbotron .btn, section#skills#about .jumbotron .btn, section#practices#about .jumbotron .btn {
-  background-color: #fff;
+section#about#about .jumbotron .btn, section#contact#about .jumbotron .btn, section#education#about .jumbotron .btn, section#gallery#about .jumbotron .btn, section#layout#about .jumbotron .btn, section#practices#about .jumbotron .btn, section#projects#about .jumbotron .btn, section#skills#about .jumbotron .btn {
+  background-color: #057c05;
   color: #000;
   margin-top: 5%;
 }
 
-section#layout#gallery, section#about#gallery, section#gallery#gallery, section#projects#gallery, section#contact#gallery, section#education#gallery, section#skills#gallery, section#practices#gallery {
+section#about#gallery, section#contact#gallery, section#education#gallery, section#gallery#gallery, section#layout#gallery, section#practices#gallery, section#projects#gallery, section#skills#gallery {
   height: 100vh;
 }
 
-section#layout#gallery .carousel-inner, section#about#gallery .carousel-inner, section#gallery#gallery .carousel-inner, section#projects#gallery .carousel-inner, section#contact#gallery .carousel-inner, section#education#gallery .carousel-inner, section#skills#gallery .carousel-inner, section#practices#gallery .carousel-inner {
+section#about#gallery .carousel-inner, section#contact#gallery .carousel-inner, section#education#gallery .carousel-inner, section#gallery#gallery .carousel-inner, section#layout#gallery .carousel-inner, section#practices#gallery .carousel-inner, section#projects#gallery .carousel-inner, section#skills#gallery .carousel-inner {
   height: 85vh;
   object-fit: contain;
   max-width: 100%;
 }
 
-section#layout#gallery .carousel-item, section#about#gallery .carousel-item, section#gallery#gallery .carousel-item, section#projects#gallery .carousel-item, section#contact#gallery .carousel-item, section#education#gallery .carousel-item, section#skills#gallery .carousel-item, section#practices#gallery .carousel-item {
+section#about#gallery .carousel-item, section#contact#gallery .carousel-item, section#education#gallery .carousel-item, section#gallery#gallery .carousel-item, section#layout#gallery .carousel-item, section#practices#gallery .carousel-item, section#projects#gallery .carousel-item, section#skills#gallery .carousel-item {
   height: 100%;
   background: no-repeat center center scroll;
   background-size: cover;
 }
 
-section#layout#gallery .h3-responsive, section#about#gallery .h3-responsive, section#gallery#gallery .h3-responsive, section#projects#gallery .h3-responsive, section#contact#gallery .h3-responsive, section#education#gallery .h3-responsive, section#skills#gallery .h3-responsive, section#practices#gallery .h3-responsive {
+section#about#gallery .h3-responsive, section#contact#gallery .h3-responsive, section#education#gallery .h3-responsive, section#gallery#gallery .h3-responsive, section#layout#gallery .h3-responsive, section#practices#gallery .h3-responsive, section#projects#gallery .h3-responsive, section#skills#gallery .h3-responsive {
   position: sticky;
   left: 40%;
   bottom: 105%;
@@ -248,36 +259,59 @@ section#layout#gallery .h3-responsive, section#about#gallery .h3-responsive, sec
   text-shadow: 12px 4px 7px #000;
 }
 
-section#layout#contact, section#about#contact, section#gallery#contact, section#projects#contact, section#contact#contact, section#education#contact, section#skills#contact, section#practices#contact {
+section#about#contact, section#contact#contact, section#education#contact, section#gallery#contact, section#layout#contact, section#practices#contact, section#projects#contact, section#skills#contact {
+  background: #333;
+  color: black;
   height: 100vh;
 }
 
-section#layout#contact .card, section#about#contact .card, section#gallery#contact .card, section#projects#contact .card, section#contact#contact .card, section#education#contact .card, section#skills#contact .card, section#practices#contact .card {
-  width: 20%;
+section#about#contact form, section#contact#contact form, section#education#contact form, section#gallery#contact form, section#layout#contact form, section#practices#contact form, section#projects#contact form, section#skills#contact form {
+  background: #777;
+  padding: 5%;
+  max-width: 600px;
   margin: auto;
 }
 
-section#layout#contact .form-control, section#about#contact .form-control, section#gallery#contact .form-control, section#projects#contact .form-control, section#contact#contact .form-control, section#education#contact .form-control, section#skills#contact .form-control, section#practices#contact .form-control {
-  width: 100%;
+section#about#contact form > input[type="text"] + label,
+section#about#contact form > input[type="email"] + label,
+section#about#contact form > input[type="password"] + label, section#contact#contact form > input[type="text"] + label,
+section#contact#contact form > input[type="email"] + label,
+section#contact#contact form > input[type="password"] + label, section#education#contact form > input[type="text"] + label,
+section#education#contact form > input[type="email"] + label,
+section#education#contact form > input[type="password"] + label, section#gallery#contact form > input[type="text"] + label,
+section#gallery#contact form > input[type="email"] + label,
+section#gallery#contact form > input[type="password"] + label, section#layout#contact form > input[type="text"] + label,
+section#layout#contact form > input[type="email"] + label,
+section#layout#contact form > input[type="password"] + label, section#practices#contact form > input[type="text"] + label,
+section#practices#contact form > input[type="email"] + label,
+section#practices#contact form > input[type="password"] + label, section#projects#contact form > input[type="text"] + label,
+section#projects#contact form > input[type="email"] + label,
+section#projects#contact form > input[type="password"] + label, section#skills#contact form > input[type="text"] + label,
+section#skills#contact form > input[type="email"] + label,
+section#skills#contact form > input[type="password"] + label {
+  opacity: 0.5;
 }
 
-section#layout#contact .form-control .input-group, section#about#contact .form-control .input-group, section#gallery#contact .form-control .input-group, section#projects#contact .form-control .input-group, section#contact#contact .form-control .input-group, section#education#contact .form-control .input-group, section#skills#contact .form-control .input-group, section#practices#contact .form-control .input-group {
-  width: 60%;
+section#about#contact form > div, section#contact#contact form > div, section#education#contact form > div, section#gallery#contact form > div, section#layout#contact form > div, section#practices#contact form > div, section#projects#contact form > div, section#skills#contact form > div {
+  position: relative;
 }
 
-section#layout#contact nav, section#about#contact nav, section#gallery#contact nav, section#projects#contact nav, section#contact#contact nav, section#education#contact nav, section#skills#contact nav, section#practices#contact nav {
-  background-color: black;
+section#about#contact form > div > label, section#contact#contact form > div > label, section#education#contact form > div > label, section#gallery#contact form > div > label, section#layout#contact form > div > label, section#practices#contact form > div > label, section#projects#contact form > div > label, section#skills#contact form > div > label {
+  opacity: 0.3;
+  position: absolute;
+  top: 10px;
+  left: 25px;
 }
 
-section#layout i.fab, section#layout i.fas, section#about i.fab, section#about i.fas, section#gallery i.fab, section#gallery i.fas, section#projects i.fab, section#projects i.fas, section#contact i.fab, section#contact i.fas, section#education i.fab, section#education i.fas, section#skills i.fab, section#skills i.fas, section#practices i.fab, section#practices i.fas {
+section#about i.fab, section#about i.fas, section#contact i.fab, section#contact i.fas, section#education i.fab, section#education i.fas, section#gallery i.fab, section#gallery i.fas, section#layout i.fab, section#layout i.fas, section#practices i.fab, section#practices i.fas, section#projects i.fab, section#projects i.fas, section#skills i.fab, section#skills i.fas {
   font-size: 300%;
 }
 
-section#layout#projects, section#about#projects, section#gallery#projects, section#projects#projects, section#contact#projects, section#education#projects, section#skills#projects, section#practices#projects {
+section#about#projects, section#contact#projects, section#education#projects, section#gallery#projects, section#layout#projects, section#practices#projects, section#projects#projects, section#skills#projects {
   height: 100vh;
 }
 
-section#layout#projects .img-fluid:hover, section#about#projects .img-fluid:hover, section#gallery#projects .img-fluid:hover, section#projects#projects .img-fluid:hover, section#contact#projects .img-fluid:hover, section#education#projects .img-fluid:hover, section#skills#projects .img-fluid:hover, section#practices#projects .img-fluid:hover {
+section#about#projects .img-fluid:hover, section#contact#projects .img-fluid:hover, section#education#projects .img-fluid:hover, section#gallery#projects .img-fluid:hover, section#layout#projects .img-fluid:hover, section#practices#projects .img-fluid:hover, section#projects#projects .img-fluid:hover, section#skills#projects .img-fluid:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -286,62 +320,55 @@ section#layout#projects .img-fluid:hover, section#about#projects .img-fluid:hove
   opacity: 0.8;
 }
 
-section#layout#projects .jumbotron, section#about#projects .jumbotron, section#gallery#projects .jumbotron, section#projects#projects .jumbotron, section#contact#projects .jumbotron, section#education#projects .jumbotron, section#skills#projects .jumbotron, section#practices#projects .jumbotron {
+section#about#projects .jumbotron, section#contact#projects .jumbotron, section#education#projects .jumbotron, section#gallery#projects .jumbotron, section#layout#projects .jumbotron, section#practices#projects .jumbotron, section#projects#projects .jumbotron, section#skills#projects .jumbotron {
   padding: 16%;
 }
 
-section#layout#education, section#about#education, section#gallery#education, section#projects#education, section#contact#education, section#education#education, section#skills#education, section#practices#education {
+section#about#education, section#contact#education, section#education#education, section#gallery#education, section#layout#education, section#practices#education, section#projects#education, section#skills#education {
   height: 100vh;
 }
 
-section#layout#practices, section#about#practices, section#gallery#practices, section#projects#practices, section#contact#practices, section#education#practices, section#skills#practices, section#practices#practices {
+section#about#practices, section#contact#practices, section#education#practices, section#gallery#practices, section#layout#practices, section#practices#practices, section#projects#practices, section#skills#practices {
   padding: 0 5%;
   text-align: center;
 }
 
-section#layout#practices button,
-section#layout#practices input, section#about#practices button,
-section#about#practices input, section#gallery#practices button,
-section#gallery#practices input, section#projects#practices button,
-section#projects#practices input, section#contact#practices button,
+section#about#practices button,
+section#about#practices input, section#contact#practices button,
 section#contact#practices input, section#education#practices button,
-section#education#practices input, section#skills#practices button,
-section#skills#practices input, section#practices#practices button,
-section#practices#practices input {
+section#education#practices input, section#gallery#practices button,
+section#gallery#practices input, section#layout#practices button,
+section#layout#practices input, section#practices#practices button,
+section#practices#practices input, section#projects#practices button,
+section#projects#practices input, section#skills#practices button,
+section#skills#practices input {
   margin: auto;
   width: 40%;
 }
 
-section#layout .copy, section#about .copy, section#gallery .copy, section#projects .copy, section#contact .copy, section#education .copy, section#skills .copy, section#practices .copy {
-  position: relative;
+section#about .copy, section#contact .copy, section#education .copy, section#gallery .copy, section#layout .copy, section#practices .copy, section#projects .copy, section#skills .copy {
+  position: absolute;
   bottom: 0;
+  left: 45%;
 }
 
-section#layout .tb-5, section#about .tb-5, section#gallery .tb-5, section#projects .tb-5, section#contact .tb-5, section#education .tb-5, section#skills .tb-5, section#practices .tb-5 {
+section#about .tb-5, section#contact .tb-5, section#education .tb-5, section#gallery .tb-5, section#layout .tb-5, section#practices .tb-5, section#projects .tb-5, section#skills .tb-5 {
   margin: 5% 0;
 }
 
-section#layout .tb-15, section#about .tb-15, section#gallery .tb-15, section#projects .tb-15, section#contact .tb-15, section#education .tb-15, section#skills .tb-15, section#practices .tb-15 {
+section#about .tb-15, section#contact .tb-15, section#education .tb-15, section#gallery .tb-15, section#layout .tb-15, section#practices .tb-15, section#projects .tb-15, section#skills .tb-15 {
   margin: 15% 0;
 }
 
-section#layout .tb-25, section#about .tb-25, section#gallery .tb-25, section#projects .tb-25, section#contact .tb-25, section#education .tb-25, section#skills .tb-25, section#practices .tb-25 {
+section#about .tb-25, section#contact .tb-25, section#education .tb-25, section#gallery .tb-25, section#layout .tb-25, section#practices .tb-25, section#projects .tb-25, section#skills .tb-25 {
   margin: 25% 0;
 }
 
-section#layout .tb-35, section#about .tb-35, section#gallery .tb-35, section#projects .tb-35, section#contact .tb-35, section#education .tb-35, section#skills .tb-35, section#practices .tb-35 {
+section#about .tb-35, section#contact .tb-35, section#education .tb-35, section#gallery .tb-35, section#layout .tb-35, section#practices .tb-35, section#projects .tb-35, section#skills .tb-35 {
   margin: 35% 0;
 }
 
-section#layout .w-10, section#about .w-10, section#gallery .w-10, section#projects .w-10, section#contact .w-10, section#education .w-10, section#skills .w-10, section#practices .w-10 {
-  width: 10vw;
-}
-
-section#layout .w-15, section#about .w-15, section#gallery .w-15, section#projects .w-15, section#contact .w-15, section#education .w-15, section#skills .w-15, section#practices .w-15 {
-  width: 15%;
-}
-
-section#layout #myVideo, section#about #myVideo, section#gallery #myVideo, section#projects #myVideo, section#contact #myVideo, section#education #myVideo, section#skills #myVideo, section#practices #myVideo {
+section#about #myVideo, section#contact #myVideo, section#education #myVideo, section#gallery #myVideo, section#layout #myVideo, section#practices #myVideo, section#projects #myVideo, section#skills #myVideo {
   top: 0;
   left: 0;
   height: 100%;
@@ -354,7 +381,7 @@ section#layout #myVideo, section#about #myVideo, section#gallery #myVideo, secti
   -webkit-filter: brightness(25%);
 }
 
-section#layout #myVideo:after, section#about #myVideo:after, section#gallery #myVideo:after, section#projects #myVideo:after, section#contact #myVideo:after, section#education #myVideo:after, section#skills #myVideo:after, section#practices #myVideo:after {
+section#about #myVideo:after, section#contact #myVideo:after, section#education #myVideo:after, section#gallery #myVideo:after, section#layout #myVideo:after, section#practices #myVideo:after, section#projects #myVideo:after, section#skills #myVideo:after {
   content: '';
   z-index: 1;
   position: relative;

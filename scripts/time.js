@@ -14,12 +14,7 @@ function showTime() {
   sec = sec < 10 ? "0" + sec : sec;
   min = min < 10 ? "0" + min : min;
   hour = hour < 10 ? "0" + hour : hour;
-
-  let currentTime = currentWeekDay + " " + days + "." + currentMonth + "." + currentYear + " " + hour + ":" +
-    min + ":" + sec;
-
-  document.getElementById("time")
-    .innerHTML = currentTime;
-
+  let currentTime = currentWeekDay + " " + days + "." + currentMonth + "." + currentYear + " " + hour + ":" + min + ":" + sec;
+  document.getElementById("time").innerHTML = currentTime;
 }
 showTime();

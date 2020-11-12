@@ -9,74 +9,6 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-@media screen and (min-width: 300px) and (max-width: 768px) {
-  section {
-    height: 100%;
-  }
-  section#about {
-    height: 100% !important;
-    background: #000;
-  }
-  section#about .display-4 {
-    margin-top: 20%;
-    font-size: 180%;
-  }
-  section#about img {
-    margin-top: 20%;
-  }
-  section#about .lead {
-    width: 100%;
-  }
-  section#projects {
-    height: 100% !important;
-  }
-  section#education {
-    height: 100% !important;
-  }
-  section#contact {
-    padding-top: 2%;
-  }
-  section#contact form {
-    position: absolute;
-    top: 18%;
-    left: 14%;
-  }
-  .social-links {
-    position: relative;
-  }
-}
-
-@media screen and (min-width: 760px) and (max-width: 1408px) {
-  section {
-    width: 100%;
-  }
-  section#contact .form-group {
-    width: 120%;
-  }
-  section#about {
-    height: 100%;
-  }
-  section#about img {
-    top: 0;
-    left: 5%;
-    transform: scale(1.5);
-    width: 200%;
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
-  }
-  section#about img#about img {
-    top: 0;
-    transform: scale(1.5);
-    width: 200%;
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
-  }
-}
-
 @keyframes slide-left {
   0% {
     opacity: 0;
@@ -108,6 +40,91 @@ body {
   }
 }
 
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  section {
+    height: 100%;
+  }
+  section nav {
+    height: 15vh !important;
+  }
+  section#about {
+    height: 100% !important;
+    background: #000;
+  }
+  section#about .display-4 {
+    margin-top: 20%;
+    font-size: 180%;
+  }
+  section#about img {
+    margin-top: 20%;
+  }
+  section#about .lead {
+    width: 100%;
+  }
+  section#projects {
+    height: 100% !important;
+  }
+  section#education {
+    height: 100% !important;
+  }
+  section#contact {
+    height: 100%;
+  }
+  section#gallerynav {
+    height: 15vh;
+  }
+  .social-links {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1408px) {
+  section {
+    width: 100%;
+  }
+  section nav {
+    height: 15%;
+  }
+  section#about {
+    height: 100%;
+  }
+  section#about img {
+    top: 0;
+    left: 5%;
+    transform: scale(1.5);
+    width: 200%;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+  }
+  section#about img#about img {
+    top: 0;
+    transform: scale(1.5);
+    width: 200%;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+  }
+}
+
+@media screen and (min-width: 200px) and (max-height: 805px) {
+  section {
+    height: 100% !important;
+  }
+  section#contact {
+    height: 100% !important;
+    height: 150vh;
+  }
+  section#contact#form {
+    width: 300px !important;
+  }
+}
+
+/* * {
+  border: 1px solid black;
+} */
 section {
   background-color: #000;
 }
@@ -143,6 +160,12 @@ section .social__links a:visited {
 
 section .social__links a:hover {
   text-shadow: #1b7a7e 3px 3px 2px;
+}
+
+section .copy {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
 }
 
 section#about, section#contact, section#education, section#gallery, section#layout, section#practices, section#projects, section#skills {
@@ -232,6 +255,7 @@ section#about .breadcrumb .breadcrumb-item a:active, section#contact .breadcrumb
 section#about#about, section#contact#about, section#education#about, section#gallery#about, section#layout#about, section#practices#about, section#projects#about, section#skills#about {
   height: 100vh;
   background-color: #000;
+  color: #057c05;
   overflow-y: hidden;
 }
 
@@ -247,6 +271,26 @@ section#about#about .jumbotron img, section#contact#about .jumbotron img, sectio
   max-width: 100%;
 }
 
+section#about#about .jumbotron p,
+section#about#about .jumbotron .slide-left,
+section#about#about .jumbotron .copy, section#contact#about .jumbotron p,
+section#contact#about .jumbotron .slide-left,
+section#contact#about .jumbotron .copy, section#education#about .jumbotron p,
+section#education#about .jumbotron .slide-left,
+section#education#about .jumbotron .copy, section#gallery#about .jumbotron p,
+section#gallery#about .jumbotron .slide-left,
+section#gallery#about .jumbotron .copy, section#layout#about .jumbotron p,
+section#layout#about .jumbotron .slide-left,
+section#layout#about .jumbotron .copy, section#practices#about .jumbotron p,
+section#practices#about .jumbotron .slide-left,
+section#practices#about .jumbotron .copy, section#projects#about .jumbotron p,
+section#projects#about .jumbotron .slide-left,
+section#projects#about .jumbotron .copy, section#skills#about .jumbotron p,
+section#skills#about .jumbotron .slide-left,
+section#skills#about .jumbotron .copy {
+  color: #057c05;
+}
+
 section#about#about .jumbotron .btn, section#contact#about .jumbotron .btn, section#education#about .jumbotron .btn, section#gallery#about .jumbotron .btn, section#layout#about .jumbotron .btn, section#practices#about .jumbotron .btn, section#projects#about .jumbotron .btn, section#skills#about .jumbotron .btn {
   background-color: #057c05;
   color: #000;
@@ -255,9 +299,13 @@ section#about#about .jumbotron .btn, section#contact#about .jumbotron .btn, sect
 
 section#about#gallery, section#contact#gallery, section#education#gallery, section#gallery#gallery, section#layout#gallery, section#practices#gallery, section#projects#gallery, section#skills#gallery {
   height: 100vh;
+  background: black;
+  background: radial-gradient(circle, black 0%, white 59%, #2b2b2b 85%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#2b2b2b", GradientType=1);
 }
 
 section#about#gallery .carousel-inner, section#contact#gallery .carousel-inner, section#education#gallery .carousel-inner, section#gallery#gallery .carousel-inner, section#layout#gallery .carousel-inner, section#practices#gallery .carousel-inner, section#projects#gallery .carousel-inner, section#skills#gallery .carousel-inner {
+  padding-top: 15vh;
   height: 85vh;
   object-fit: contain;
   max-width: 100%;
@@ -265,6 +313,7 @@ section#about#gallery .carousel-inner, section#contact#gallery .carousel-inner, 
 
 section#about#gallery .carousel-item, section#contact#gallery .carousel-item, section#education#gallery .carousel-item, section#gallery#gallery .carousel-item, section#layout#gallery .carousel-item, section#practices#gallery .carousel-item, section#projects#gallery .carousel-item, section#skills#gallery .carousel-item {
   height: 100%;
+  z-index: 1;
   background: no-repeat center center scroll;
   background-size: cover;
 }
@@ -277,43 +326,71 @@ section#about#gallery .h3-responsive, section#contact#gallery .h3-responsive, se
   text-shadow: 12px 4px 7px #000;
 }
 
+section#about#education .card, section#contact#education .card, section#education#education .card, section#gallery#education .card, section#layout#education .card, section#practices#education .card, section#projects#education .card, section#skills#education .card {
+  box-shadow: #000 15px 14px 25px;
+}
+
+section#about#education li,
+section#about#education h4,
+section#about#education h5, section#contact#education li,
+section#contact#education h4,
+section#contact#education h5, section#education#education li,
+section#education#education h4,
+section#education#education h5, section#gallery#education li,
+section#gallery#education h4,
+section#gallery#education h5, section#layout#education li,
+section#layout#education h4,
+section#layout#education h5, section#practices#education li,
+section#practices#education h4,
+section#practices#education h5, section#projects#education li,
+section#projects#education h4,
+section#projects#education h5, section#skills#education li,
+section#skills#education h4,
+section#skills#education h5 {
+  color: #057c05;
+}
+
 section#about#contact, section#contact#contact, section#education#contact, section#gallery#contact, section#layout#contact, section#practices#contact, section#projects#contact, section#skills#contact {
-  background: #333;
+  background: #aaaaaa;
   color: black;
   height: 100vh;
 }
 
 section#about#contact form, section#contact#contact form, section#education#contact form, section#gallery#contact form, section#layout#contact form, section#practices#contact form, section#projects#contact form, section#skills#contact form {
-  padding: 5% 8%;
+  padding: 5% 7%;
+  border: 5px solid black;
+  box-shadow: #000 15px 140px 2020px;
   max-width: 800px;
   margin: auto;
   margin-top: 5%;
 }
 
 section#about#contact form input,
-section#about#contact form button,
 section#about#contact form .form-control, section#contact#contact form input,
-section#contact#contact form button,
 section#contact#contact form .form-control, section#education#contact form input,
-section#education#contact form button,
 section#education#contact form .form-control, section#gallery#contact form input,
-section#gallery#contact form button,
 section#gallery#contact form .form-control, section#layout#contact form input,
-section#layout#contact form button,
 section#layout#contact form .form-control, section#practices#contact form input,
-section#practices#contact form button,
 section#practices#contact form .form-control, section#projects#contact form input,
-section#projects#contact form button,
 section#projects#contact form .form-control, section#skills#contact form input,
-section#skills#contact form button,
 section#skills#contact form .form-control {
+  background: #aaaaaa;
   margin: 0;
   border: none;
+  border-bottom: 1px dotted #555555;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
+}
+
+section#about#contact form .btn, section#contact#contact form .btn, section#education#contact form .btn, section#gallery#contact form .btn, section#layout#contact form .btn, section#practices#contact form .btn, section#projects#contact form .btn, section#skills#contact form .btn {
+  margin-top: 1rem;
+}
+
+section#about#contact form .btn-danger, section#contact#contact form .btn-danger, section#education#contact form .btn-danger, section#gallery#contact form .btn-danger, section#layout#contact form .btn-danger, section#practices#contact form .btn-danger, section#projects#contact form .btn-danger, section#skills#contact form .btn-danger {
+  background-color: red;
 }
 
 section#about i.fab, section#about i.fas, section#contact i.fab, section#contact i.fas, section#education i.fab, section#education i.fas, section#gallery i.fab, section#gallery i.fas, section#layout i.fab, section#layout i.fas, section#practices i.fab, section#practices i.fas, section#projects i.fab, section#projects i.fas, section#skills i.fab, section#skills i.fas {
@@ -323,6 +400,66 @@ section#about i.fab, section#about i.fas, section#contact i.fab, section#contact
 section#about#projects, section#contact#projects, section#education#projects, section#gallery#projects, section#layout#projects, section#practices#projects, section#projects#projects, section#skills#projects {
   height: 100vh;
   background: #000;
+}
+
+section#about#projectsh1,
+section#about#projects h2,
+section#about#projects h3,
+section#about#projects h4,
+section#about#projects h5,
+section#about#projects div,
+section#about#projects i,
+section#about#projects li, section#contact#projectsh1,
+section#contact#projects h2,
+section#contact#projects h3,
+section#contact#projects h4,
+section#contact#projects h5,
+section#contact#projects div,
+section#contact#projects i,
+section#contact#projects li, section#education#projectsh1,
+section#education#projects h2,
+section#education#projects h3,
+section#education#projects h4,
+section#education#projects h5,
+section#education#projects div,
+section#education#projects i,
+section#education#projects li, section#gallery#projectsh1,
+section#gallery#projects h2,
+section#gallery#projects h3,
+section#gallery#projects h4,
+section#gallery#projects h5,
+section#gallery#projects div,
+section#gallery#projects i,
+section#gallery#projects li, section#layout#projectsh1,
+section#layout#projects h2,
+section#layout#projects h3,
+section#layout#projects h4,
+section#layout#projects h5,
+section#layout#projects div,
+section#layout#projects i,
+section#layout#projects li, section#practices#projectsh1,
+section#practices#projects h2,
+section#practices#projects h3,
+section#practices#projects h4,
+section#practices#projects h5,
+section#practices#projects div,
+section#practices#projects i,
+section#practices#projects li, section#projects#projectsh1,
+section#projects#projects h2,
+section#projects#projects h3,
+section#projects#projects h4,
+section#projects#projects h5,
+section#projects#projects div,
+section#projects#projects i,
+section#projects#projects li, section#skills#projectsh1,
+section#skills#projects h2,
+section#skills#projects h3,
+section#skills#projects h4,
+section#skills#projects h5,
+section#skills#projects div,
+section#skills#projects i,
+section#skills#projects li {
+  color: #057c05;
 }
 
 section#about#projects .img-fluid:hover, section#contact#projects .img-fluid:hover, section#education#projects .img-fluid:hover, section#gallery#projects .img-fluid:hover, section#layout#projects .img-fluid:hover, section#practices#projects .img-fluid:hover, section#projects#projects .img-fluid:hover, section#skills#projects .img-fluid:hover {
@@ -339,7 +476,6 @@ section#about#education, section#contact#education, section#education#education,
 }
 
 section#about#practices, section#contact#practices, section#education#practices, section#gallery#practices, section#layout#practices, section#practices#practices, section#projects#practices, section#skills#practices {
-  padding: 0 5%;
   text-align: center;
 }
 
@@ -354,6 +490,70 @@ section#projects#practices input, section#skills#practices button,
 section#skills#practices input {
   margin: auto;
   width: 40%;
+}
+
+section#about#skills, section#contact#skills, section#education#skills, section#gallery#skills, section#layout#skills, section#practices#skills, section#projects#skills, section#skills#skills {
+  height: 100vh;
+}
+
+section#about#skillsh1,
+section#about#skills h2,
+section#about#skills h3,
+section#about#skills h4,
+section#about#skills h5,
+section#about#skills div,
+section#about#skills i,
+section#about#skills li, section#contact#skillsh1,
+section#contact#skills h2,
+section#contact#skills h3,
+section#contact#skills h4,
+section#contact#skills h5,
+section#contact#skills div,
+section#contact#skills i,
+section#contact#skills li, section#education#skillsh1,
+section#education#skills h2,
+section#education#skills h3,
+section#education#skills h4,
+section#education#skills h5,
+section#education#skills div,
+section#education#skills i,
+section#education#skills li, section#gallery#skillsh1,
+section#gallery#skills h2,
+section#gallery#skills h3,
+section#gallery#skills h4,
+section#gallery#skills h5,
+section#gallery#skills div,
+section#gallery#skills i,
+section#gallery#skills li, section#layout#skillsh1,
+section#layout#skills h2,
+section#layout#skills h3,
+section#layout#skills h4,
+section#layout#skills h5,
+section#layout#skills div,
+section#layout#skills i,
+section#layout#skills li, section#practices#skillsh1,
+section#practices#skills h2,
+section#practices#skills h3,
+section#practices#skills h4,
+section#practices#skills h5,
+section#practices#skills div,
+section#practices#skills i,
+section#practices#skills li, section#projects#skillsh1,
+section#projects#skills h2,
+section#projects#skills h3,
+section#projects#skills h4,
+section#projects#skills h5,
+section#projects#skills div,
+section#projects#skills i,
+section#projects#skills li, section#skills#skillsh1,
+section#skills#skills h2,
+section#skills#skills h3,
+section#skills#skills h4,
+section#skills#skills h5,
+section#skills#skills div,
+section#skills#skills i,
+section#skills#skills li {
+  color: #057c05;
 }
 
 section#about .tb-5, section#contact .tb-5, section#education .tb-5, section#gallery .tb-5, section#layout .tb-5, section#practices .tb-5, section#projects .tb-5, section#skills .tb-5 {

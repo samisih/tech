@@ -18,6 +18,7 @@
       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
       <li class="breadcrumb-item"><a href="about.html">About</a></li>
       <li class="breadcrumb-item"><a href="education.html">Education</a></li>
+      <li class="breadcrumb-item"><a href="skills.html">Skills</a></li>
       <li class="breadcrumb-item" aria-current="projects.html" active>Projects</a></li>
       <li class="breadcrumb-item"><a href="gallery.html">Gallery</a></li>
       <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
@@ -29,10 +30,10 @@
   <!-- Jumbotron -->
   <div class="card container text-center text-white bg-dark">
     <h3 class="display-5 mt-5 slide-left" id="#">JavaScript Harjoituksia</h3>
-    <p class="lead mt-5">
+        <div id="time"></div>
+    <p class="lead mt-5 mb-5">
       Taitotalon JavaScript-kurssin harjoitukset</p>
     <!-- ITSE MODIFIOITU KELLO JA PÄIVÄMÄÄRÄ -->
-    <div id="time"></div>
   </div>
   <div class="tb-5"></div>
   <!-- /Jumbotron -->
@@ -219,8 +220,13 @@
       <button type="button" onclick="variVaihto()">Paina</button>
       <br>
       <p id="print"></p>
-    </div>
+       <span id="tunniste">Mitä sanoo?</span>
+    <input type="text" placeholder="kissa/koira" id="lueYksi">
+    <button onclick="funktio()">Nappi</button>
+    <p id="aantely">Mitä se sanoo</p>
 
+    </div>
+    
   </div>
 
   <h5 class="copy text-center">Sami Sihvonen &copy;</h5>

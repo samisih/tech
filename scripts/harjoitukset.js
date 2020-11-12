@@ -164,3 +164,37 @@ function variVaihto() {
   }
 
 }
+
+function funktio() {
+  var arvo = document.querySelector("#lueYksi").value;
+  var tulos;
+  var vari;
+  var aani;
+
+  if (arvo == "kissa") {
+    aani = "miu!";
+    tulos = arvo + " sanoo " + aani;
+    vari = " yellow";
+  } else if (arvo == "koira") {
+    aani = " wuf!";
+    tulos = arvo + " sanoo " + aani;
+    vari = "red";
+  } else {
+    aani = " ÖR ÖRÖ RÖ RÖRÖÖÖ ";
+    tulos = arvo + " jotain meni pieleen" + aani;
+    vari = "navy";
+  }
+
+  var i = 5;
+  while (i > 0) {
+    document.querySelector("#aantely").innerHTML += aani;
+    document.querySelector("#aantely").style.fontSize = "72px";
+    i--;
+  }
+
+  /* 
+      document.querySelector("#tunniste").innerHTML = tulos;
+      document.querySelector("#tunniste").style.color = vari;
+      document.querySelector("#tunniste").style.backgroundColor = "purple"; */
+
+}

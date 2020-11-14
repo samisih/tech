@@ -3,7 +3,7 @@
 //SINUN NIMESI
 function sinunNimesi() {
   var x = document.getElementById("myText").value;
-  document.getElementById("name").innerHTML = "Moikka " + x + " sinun nimesi on :" + x;
+  document.getElementById("name").innerHTML = "Moikka " + x + " sinun nimesi on " + x;
 }
 //FUNKTIO NELJÄ ARGUMENTTIA 
 function miinusta(a, b, c, d) {
@@ -35,18 +35,21 @@ function countNums() {
 }
 //JAVASCRIPT ON PARASTA IKINÄ
 function jaavaSkripti() {
-  document.getElementById("best").innerHTML = "HTML ja JavaScript on parasta ikinä";
+  document.getElementById("best").innerHTML = "<h1>HTML ja JavaScript on parasta ikinä</h1>";
 }
 // Harjoitus 5. HTML + JS
 function valueCounter() {
   var x = document.getElementById("word").value;
-  var y = document.getElementById("number").value;
-  var num = parseInt(y);
-  while (num < 5) {
-    num++;
+  var y = parseInt(document.getElementById("number").value) + 1;
+
+  while (y > 1) {
+    y--;
+    document.getElementById("tulos").outerHTML += "Kierros " + y + ":<br> " + x + " <br>";
   }
-  document.getElementById("tulos").innerHTML = "Kirjoitit " + x + " ja annoit numeron " + y.repeat(num) + " kertaa ";
+
 }
+
+
 //FUNKTIO ARPOO NUMERON NOLLAN JA ANNETUN NUMERON VÄLILTÄ, FUNTIO PALAUTTAA
 //NUMERON
 function arpooLuvun(annettuLuku) {
@@ -148,8 +151,4 @@ function funktio() {
     document.querySelector("#aantely").style.fontSize = "72px";
     i--;
   }
-  /* 
-      document.querySelector("#tunniste").innerHTML = tulos;
-      document.querySelector("#tunniste").style.color = vari;
-      document.querySelector("#tunniste").style.backgroundColor = "purple"; */
 }

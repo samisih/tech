@@ -63,6 +63,7 @@ body {
   }
   section#projects {
     height: 100% !important;
+    padding-bottom: 5%;
   }
   section#education {
     height: 100% !important;
@@ -163,9 +164,9 @@ section .social__links a:hover {
 }
 
 section .copy {
-  position: absolute;
-  bottom: 0;
-  left: 45%;
+  /*     position: absolute;
+    bottom: 0;
+    left: 45%; */
 }
 
 section#about, section#contact, section#education, section#gallery, section#layout, section#practices, section#projects, section#skills {
@@ -314,8 +315,13 @@ section#about#gallery .carousel-inner, section#contact#gallery .carousel-inner, 
 section#about#gallery .carousel-item, section#contact#gallery .carousel-item, section#education#gallery .carousel-item, section#gallery#gallery .carousel-item, section#layout#gallery .carousel-item, section#practices#gallery .carousel-item, section#projects#gallery .carousel-item, section#skills#gallery .carousel-item {
   height: 100%;
   z-index: 1;
-  background: no-repeat center center scroll;
-  background-size: cover;
+  transform: translateY(-100px);
+  background: no-repeat center;
+  background-size: contain;
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
 }
 
 section#about#gallery .h3-responsive, section#contact#gallery .h3-responsive, section#education#gallery .h3-responsive, section#gallery#gallery .h3-responsive, section#layout#gallery .h3-responsive, section#practices#gallery .h3-responsive, section#projects#gallery .h3-responsive, section#skills#gallery .h3-responsive {
@@ -493,7 +499,7 @@ section#skills#practices input {
 }
 
 section#about#skills, section#contact#skills, section#education#skills, section#gallery#skills, section#layout#skills, section#practices#skills, section#projects#skills, section#skills#skills {
-  height: 100vh;
+  height: 100%;
 }
 
 section#about#skillsh1,

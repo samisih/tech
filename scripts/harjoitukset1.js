@@ -1,16 +1,17 @@
 //Harjoitukset 1.
 function silmukka() {
     var laske = 0;
-    var eka = document.querySelector("#eka").value;
-    var toka = document.querySelector("#toka").value;
+    var ett = document.querySelector("#ett").value;
+    var tvo = document.querySelector("#tvo").value;
 
 
-    for (var i = 0; i < eka.length; i++)
-        if (eka[i] == toka || eka[i] == toka) {
+    for (var i = 0; i < ett.length; i++)
+        if (ett[i] == tvo) {
             laske++;
         }
 
-    document.querySelector("#tuloste").innerHTML = "Kirjoitit sanan " + eka + " jossa on " + laske + " " + toka + "-kirjainta";
+
+    document.querySelector("#tuloste").outerHTML += "Kirjoitit sanan " + ett + " jossa on " + laske + " " + tvo + "-kirjainta";
 }
 
 //Harjoitukset 2.
@@ -73,6 +74,8 @@ function ruokaKassi() {
     document.querySelector("#kassi").style.backgroundColor = "red";
     document.querySelector("#kassi").style.color = "white";
     document.querySelector("#kassi").style.fontSize = "27px";
+    document.querySelector("#kassi").style.padding = "7%";
+    document.querySelector("#kassi").style.margin = "7%";
 
 }
 console.log(x);
@@ -100,26 +103,27 @@ function merkkiJono() {
 /* Merkkijonoja */
 function merkkiJonoja() {
     var merkkiJonoja = ["JavaScript", "React", "Node.js", "MongoDB", "PHP", "SQL"];
-
+    document.querySelector("#merkkijonot").style.margin = "7%";
+    document.querySelector("#merkkijonot").style.padding = "17%";
+    document.querySelector("#merkkijonot").style.color = "black";
+    document.querySelector("#merkkijonot").style.backgroundColor = "lightgray";
     document.querySelector("#merkkijonot").innerHTML = "Haluaisin oppia " + merkkiJonoja.join(" + ") + " edes kohtuullisesti, jotta pystyisin tekemään koodaushommia ammatikseni. ";
 }
 
 /* End Merkkijonoja */
 
 function valitsePow() {
-    document.querySelector("#pow").style.textAlign = "center";
-    document.querySelector("#pow").style.backgroundColor = "navy";
-    document.querySelector("#pow").style.color = "silver";
+
+    document.querySelector("#pow").style.cssText = "animation: anim 3s forwards; color: silver; background-color: navy;";
+
 }
 function valitseCrash() {
-    document.querySelector("#crash").style.textAlign = "center";
-    document.querySelector("#crash").style.backgroundColor = "red";
-    document.querySelector("#crash").style.color = "yellow";
+
+    document.querySelector("#crash").style.cssText = "animation: anim 3s forwards; color: yellow; background-color: red;";
+
 }
 function valitseBomf() {
-    document.querySelector("#bomf").style.textAlign = "center";
-    document.querySelector("#bomf").style.backgroundColor = "black";
-    document.querySelector("#bomf").style.color = "blue";
+    document.querySelector("#bomf").style.cssText = "animation: anim 3s forwards; color: blue; background-color: black;";
 }
 
 /* POW, CRASH, BOMF */

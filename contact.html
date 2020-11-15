@@ -37,77 +37,100 @@
 
   <!-- Jumbotron -->
 
-    <form id="form" action="#" method=" ">
-       <h5 class="text-center" id="">
+    <form id="form" class="was-validated" novalidate="">
+       <h5 class="text-center mb-5" id="">
            Take contact</h5>
-    <div>
-      <input type="text" id="first_name" name="first_name"   placeholder="name"
-      class="form-control form-text"required maxlength="25" required>
+           <div class="row">
+             <div class="col">   
+                <div class="form-group">
+       <label for="inputSuccess01">First name</label>
+      <input type="text" id="inputSuccess01" name="first_name"   
+      class="form-control form-text is-invalid" required maxlength="25" required>
+       <div class="valid-feedback">Valid.</div>
+    </div></div>
+             <div class="col">      <div class="form-group">
+     <label for="inputSuccess02">Last name</label>    
+      <input type="text" id="linputSuccess02"class="form-control form-text is-invalid"
+     required maxlength="25" required>
+      <div class="valid-feedback">Valid.</div>
+      </div></div>
+           </div>    
+        </div>
 
-    </div>
-      <div>
-      <input type="text" id="last_name"class="form-control form-text"
-      placeholder="lastname" required maxlength="25" required>
-
+   
+      <div class="form-group">
+          <label for="inputSuccess03">Email</label>    
+      <input type="text" id="inputSuccess03"class="form-control form-text is-invalid" required maxlength="25" required>
+       <div class="valid-feedback">Valid.</div>
       </div>
-      <div>
-      <input type="text" id="email"class="form-control form-text"
-      placeholder="email" required maxlength="25" required>
 
-      </div>
-      <div>
+      <div class="row">
+        <div class="col">
+           <div class="form-group">
+         <label for="inputSuccess04">Gender</label>    
         <div class="form-control">
-
-          <input type="radio" name="gender" id="gender" required>
+          <input type="radio" name="gender" class="is-invalid" id="inputSuccess04" required>
           <label for="gender">Male</label>
 
-            <input type="radio" name="gender" id="gender" required>
+            <input type="radio" name="gender" class="is-invalid" id="gender" required>
           <label for="gender">Female</label>
 
-            <input type="radio" name="gender" id="gender" required>
+            <input type="radio" name="gender" class="is-invalid" id="gender" required>
             <label for="gender">Other</label>
+             <div class="valid-feedback">Valid.</div>
         </div>
+ 
       </div>
-      <div>
-        <input type="text" id="age"class="form-control form-text"
-        placeholder="age" required minlength="1" maxlength="2">
-
-      </div>
-      <div>
-        <div class="dropdown">
-          <button class="btn btn-secondary btn-lg dropdown-toggle form-control"
-          type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" required>
-            Location
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-          required>
-            <a class="dropdown-item" href="#">Finland</a>
-            <a class="dropdown-item" href="#">Outside Finland</a>
-          </div>
         </div>
-      </div>
+        <div class="col">
 
-      <div>
-            <input type="text" id="website" placeholder="Website URL"
-            class="form-control form-text" required maxlength="50" required>
+      <div class="form-group">
+          <label for="inputSuccess05">Age</label> 
+        <input type="text" id="inputSuccess05"class="form-control form-text is-invalid" required minlength="1" maxlength="2">
+         <div class="valid-feedback">Valid.</div>
+      </div>
 
         </div>
       </div>
+     
 
-        <div>
-            <input type="text" id="website" placeholder="Place Comment"
-            class="form-control form-text" required maxlength="255" required
+
+      <div class="form-group">
+         <label for="inputSuccess06"></label> 
+ <label for="country">Location</label><span style="color: red !important;"> *</span>      
+        
+            <select id="country" name="country" class="form-control">
+                <option value="Finland">Finland</option>
+                <option value="Outside">Outside Finland</option>
+          
+            </select>
+        </div>
+      </div>
+
+      <div class="form-group"> 
+           <label for="inputSuccess07">Website</label> 
+            <input type="text" id="inputSuccess07" placeholder="Website URL"
+            class="form-control form-text is-invalid" required maxlength="50" required>   
+                <div class="valid-feedback">Valid.</div>
+                  </div>
+                </div>
+
+        <div class="form-group">
+          <label for="inputSuccess08">Comments</label> 
+            <input type="text" id="inputSuccess08" placeholder="Place Comment"
+            class="form-control form-text is-invalid" required maxlength="255" required
             oninvalid="alert('You must fill out the form!');">
-
+                <div class="valid-feedback">Valid.</div>
       </div>
-      <div><div class="row">
+      
+      <div class="form-group"
+      ><div class="row">
         <div class="col">
         <input type="reset" id="btn" class="btn btn-danger w-100 btn-lg"
         placeholder="reset"></div>
         <div class="col"> <input type="submit" id="btn" class="btn bg-success
-        w-100 text-white btn-lg" onclick="validForm()" placeholder="send"
-        href="mailto:someone@example.com" method="post" enctype="text/plain"
+        w-100 text-white btn-lg" placeholder="send"
+        enctype="text/plain"
         role="button" ></div>
       </div>       
       </div>
@@ -144,14 +167,27 @@
     </div>
   </div>
 </section>
-
-<script type="text/javascript">
-
-function validForm(){
-    document.querySelector("form").style.backgroundColor= "pink";
-}
-
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
 </script>
+
 <!-- Optional JavaScript -->
 <!-- jQuery Car, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

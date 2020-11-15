@@ -34,7 +34,6 @@
         <div id="time"></div>
         <div class="mt-15"></div>
     <!-- ITSE MODIFIOITU KELLO JA PÄIVÄMÄÄRÄ -->
-  <div class="container">
     <div class="card bg-dark p-3">
       <form class="text-success">
         <!-- Sinun nimesi on -->
@@ -68,7 +67,7 @@
       </h3>
       <br>
       <input type="text" name="addNum" placeholder="Kirjoita lause" id="annettuLause">
-      br
+      <br>
       <button type="button" class="btn btn-dark" type="button"  onclick="laskeKirjaimia()">Laske</button>
       <br>
       <p id="kirjaimet">Löydettyjen Aa-kirjainten määrä</p>
@@ -213,8 +212,8 @@
                 <div class="col">
                    <div class="card">
          <h5 class="card-title">1. tehtävä</h5>  
-    <input type="text" placeholder="Kirjota jotain" id="eka">
-    <input type="text" placeholder="Mitä kirjainta etsitään?" id="toka">
+    <input type="text" placeholder="Kirjota jotain" id="ett">
+    <input type="text" placeholder="Mitä kirjainta etsitään?" id="tvo">
     <button type="button" class="btn btn-dark" onclick="silmukka()">Klikkaa
     mua</button>
     <br>
@@ -233,7 +232,7 @@
     <div id="moikka"></div></div>
                     </div>
                 </div>
-            </div>
+        
             <!-- moikka -->
                             <!-- Sana ja numero -->
                 <div class="mt-15"></div>
@@ -260,15 +259,15 @@
     onclick="munAuto.kerroKaikkitiedot()"  data-toggle="modal"
     data-target="#exampleModal"><h2>Mun auto</h2> <img
     src="https://img.favcars.com/ford/focus/images_ford_focus_2011_1_b.jpg"
-    width=120px height="110px" alt="mun auto"></button>
+alt="mun auto"></button>
+    <div id="kulutus"></div>
     <br>
     <button type="button" class="btn btn-dark" id="isin"
     onclick="isinAuto.kerroKaikkitiedot()"  data-toggle="modal"
     data-target="#exampleModal"> <h2>Isin auto </h2><img
     src="https://img.favcars.com/nissan/almera-tino/photos_nissan_almera_tino_2000_1_b.jpg"
-    width=120px height="110px" alt="isin auto"></button>
+   alt="isin auto"></button>
     <br>    
-    <div id="kulutus"></div>
             </div>
         </div>
      </div>
@@ -327,18 +326,18 @@
          <h5 class="card-title">8.  tehtävä</h5>        
 <ul class="list-group list-group-flush">
     <h5>Klikkaa vuorotellen alla olevia</h5>
-    <li class="list-group-item bg-dark text-center"><a class="text-white"
+    <li class="list-group-item bg-dark "><a class="text-white"
     href="#pow" onclick= valitsePow()>POW</a></li>
-    <li class="list-group-item bg-dark text-center"><a class="text-white"
+    <li class="list-group-item bg-dark "><a class="text-white"
     href="#crash" onclick= valitseCrash()>CRASH</a></li>
-    <li class="list-group-item bg-dark text-center"><a class="text-white"
+    <li class="list-group-item bg-dark "><a class="text-white"
     href="#bomf" onclick= valitseBomf()>BOMF</a></li>
 </ul>
 <br>
-<div class="text-left">
-<h4 id="pow">POW</h4>
-<h4 id="crash">CRASH</h4>
-<h4 id="bomf">BOMF</h4>
+<div class="text">
+<h4 class="text-left ml-5" id="pow">POW</h4>
+<h4 class="text-left ml-5" id="crash">CRASH</h4>
+<h4 class="text-left ml-5" id="bomf">BOMF</h4>
 </div>
 
     <br>

@@ -141,7 +141,7 @@ function funktio() {
     tulos = arvo + " sanoo " + aani;
     vari = "red";
   } else {
-    aani = " ÖR ÖRÖ RÖ RÖRÖÖÖ ";
+    aani = " ÖR RÖR RÖÖÖ ";
     tulos = arvo + " jotain meni pieleen" + aani;
     vari = "navy";
   }

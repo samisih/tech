@@ -9,6 +9,21 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* // Sass map from `_variables.scss`
+// Override this and recompile your Sass to generate different states
+$form-validation-states: map-merge(("valid": ("color": $form-feedback-valid-color,
+      "icon": $form-feedback-icon-valid),
+    "invalid": ("color": $form-feedback-invalid-color,
+      "icon": $form-feedback-icon-invalid)),
+  $form-validation-states);
+
+// Loop from `_forms.scss`
+// Any modifications to the above Sass map will be reflected in your compiled
+// CSS via this loop.
+@each $state,
+$data in $form-validation-states {
+  @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+} */
 @keyframes slide-left {
   0% {
     opacity: 0;
@@ -161,12 +176,6 @@ section .social__links a:visited {
 
 section .social__links a:hover {
   text-shadow: #1b7a7e 3px 3px 2px;
-}
-
-section .copy {
-  /*     position: absolute;
-    bottom: 0;
-    left: 45%; */
 }
 
 section#about, section#contact, section#education, section#gallery, section#layout, section#practices, section#projects, section#skills {
@@ -357,18 +366,22 @@ section#skills#education h5 {
 }
 
 section#about#contact, section#contact#contact, section#education#contact, section#gallery#contact, section#layout#contact, section#practices#contact, section#projects#contact, section#skills#contact {
-  background: #aaaaaa;
+  background: #464646;
   color: black;
   height: 100vh;
 }
 
 section#about#contact form, section#contact#contact form, section#education#contact form, section#gallery#contact form, section#layout#contact form, section#practices#contact form, section#projects#contact form, section#skills#contact form {
-  padding: 5% 7%;
-  border: 5px solid black;
-  box-shadow: #000 15px 140px 2020px;
-  max-width: 800px;
+  padding: 3% 4%;
+  background-origin: border-box;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  box-shadow: inset 0 20px 120px #0c0c0c, 0 0 120px #fdfdfd, inset -999px 0 0 #fff;
+  max-width: 700px;
+  height: 80vh;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 2%;
+  object-fit: cover;
 }
 
 section#about#contact form input,
@@ -380,8 +393,8 @@ section#layout#contact form .form-control, section#practices#contact form input,
 section#practices#contact form .form-control, section#projects#contact form input,
 section#projects#contact form .form-control, section#skills#contact form input,
 section#skills#contact form .form-control {
-  background: #aaaaaa;
-  margin: 0;
+  background: inherit;
+  margin: -0.3rem;
   border: none;
   border-bottom: 1px dotted #555555;
   border-radius: 0;
@@ -389,10 +402,6 @@ section#skills#contact form .form-control {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-}
-
-section#about#contact form .btn, section#contact#contact form .btn, section#education#contact form .btn, section#gallery#contact form .btn, section#layout#contact form .btn, section#practices#contact form .btn, section#projects#contact form .btn, section#skills#contact form .btn {
-  margin-top: 1rem;
 }
 
 section#about#contact form .btn-danger, section#contact#contact form .btn-danger, section#education#contact form .btn-danger, section#gallery#contact form .btn-danger, section#layout#contact form .btn-danger, section#practices#contact form .btn-danger, section#projects#contact form .btn-danger, section#skills#contact form .btn-danger {
@@ -495,7 +504,7 @@ section#practices#practices input, section#projects#practices button,
 section#projects#practices input, section#skills#practices button,
 section#skills#practices input {
   margin: auto;
-  width: 40%;
+  width: 60%;
 }
 
 section#about#skills, section#contact#skills, section#education#skills, section#gallery#skills, section#layout#skills, section#practices#skills, section#projects#skills, section#skills#skills {

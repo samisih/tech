@@ -26,9 +26,30 @@ $blue: blue;
 $red: red;
 $yellow: rgb(255, 247, 0);
 $green: rgb(5, 124, 5);
+$form-feedback-valid-color: rgb(25, 183, 36);
+$form-feedback-icon-valid:absolute auto bottom 10px right 10px margin-top 0;
+$form-feedback-icon-invalid: absolute auto bottom 10px right 10px margin-top 0;
+$form-feedback-invalid-color: rgb(255, 26, 25);
+$form-validation-states: center;
 
 body {
   font-family: $textPrimary;
   font-weight: $light;
   -webkit-text-size-adjust: 100%;
 }
+
+/* // Sass map from `_variables.scss`
+// Override this and recompile your Sass to generate different states
+$form-validation-states: map-merge(("valid": ("color": $form-feedback-valid-color,
+      "icon": $form-feedback-icon-valid),
+    "invalid": ("color": $form-feedback-invalid-color,
+      "icon": $form-feedback-icon-invalid)),
+  $form-validation-states);
+
+// Loop from `_forms.scss`
+// Any modifications to the above Sass map will be reflected in your compiled
+// CSS via this loop.
+@each $state,
+$data in $form-validation-states {
+  @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+} */

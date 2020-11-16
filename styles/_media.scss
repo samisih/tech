@@ -36,7 +36,10 @@
         &#contact {
             height: 100%;
 
-            & form {}
+            & form {
+                padding: 5% 0;
+                height: 100%;
+            }
 
 
         }
@@ -49,7 +52,13 @@
     }
 
     &.social-links {
-        position: relative;
+        position: absolute;
+        top: 12%;
+        right: 4%;
+        display: flex;
+        gap: 8px;
+        list-style-type: none;
+
     }
 }
 

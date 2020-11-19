@@ -12,10 +12,11 @@
   integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
   crossorigin="anonymous">
   <link rel="stylesheet" href="sheet.css">
+    <link rel="stylesheet" href="styles/sheet.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="jumbotron">
+    <div class="jumbotron"  id="background">
         <div class="container">
               <h4 class="display-h text-center">Kertausta JavaScript ja Node.js
               kurssin kotitehtävät</h4>                                    
@@ -46,7 +47,7 @@
     <div id="moikka"></div></div>
                     </div>
                 </div>
-            </div>
+        
             <!-- moikka -->
                             <!-- Sana ja numero -->
                 <div class="mt-15"></div>
@@ -152,11 +153,111 @@
 <h4 id="bomf">BOMF</h4>
     <br>
     <p id="merkkijonot"></p></div>
+
+    <!-- 8.Tunnilla käytyä -->
+     <h4 class="display-h text-center">Kertausta 8.päivän JavaScript ja Node.js
+              kurssin tehtävät</h4>          
+            <div class="mt-15"></div>
+                <p class="lead text-center mb-5">Viikko 4. Päivät 8.</p>
+         <div class="mt-15"></div>
+            <div class="row">
+                <div class="col">
+                   <div class="card">
+                <h5 class="card-title">
+               <div class="card-text" id="tunniste">7.  tehtävä</div>
+               
+            </h5>    
+    <button type="button" class="btn btn-dark" id="tulosta">Vaihda taustaväri</button>
+      <h1 class="text-center" id="tulosta">Mainos</h1>
+  <button id="lue">nappi</button>
+  <button id="lue2">nappi</button>
+  <h3 class="text-center  m-5 p-5" id="block">Miten click ja onclik eroavat toisistaan ?
+      <br>Koita myös painaa tätä vaaleanpunaista pitkään
+  </h3>
+  <button id ="on" onClick="tausta4()">Klikkaa tätä</button>
+  <h3 id="block2" class="text-center m-5 p-5">
+     Paina tämän alueen päällä hiirtä pohjassa
+  </h3>
+    <button id ="on" onClick="tausta9()">Klikkaa tätä</button>
+    <button id ="bg" onClick="tausta9()">Vaihda taustaväri</button>
+    <br>
+    <p id="merkkijonot"></p></div>
                 <!-- Tämän alle ei enää tehtäviä -->
             </div>
         </div>
     </div>
       </div>
+    </div>
+    <script>
+var bg = document.getElementById("background");
+var bgd = document.getElementById("bg");
+var elem = document.getElementById("tulosta");
+var btn = document.getElementById("lue");
+var btn2 = document.getElementById("lue2");
+var elem2 = document.getElementById("block");
+var elem3 = document.getElementById("block2");
+
+btn.addEventListener("click", tausta);
+btn2.addEventListener("click", tausta2);
+elem2.addEventListener("click",tausta3);
+elem2.addEventListener("onclick",tausta4);
+elem3.addEventListener("mousedown",tausta5);
+elem3.addEventListener("mouseup",tausta6);
+elem3.addEventListener("mouseover",tausta7);
+elem3.addEventListener("change",tausta9);
+elem3.addEventListener("load",tausta10);
+elem3.addEventListener("unload",tausta11);
+bgd.addEventListener("load", tausta10);
+bgd.addEventListener("click", tausta10);
+
+
+function tausta(){
+ bg.style.backgroundColor= "darkgray";
+ elem.innerHTML = "Mainos";
+}
+
+function tausta2(){
+  elem.style.backgroundColor = "transparent";
+  elem.innerHTML = "Hieno Homma";
+}
+
+function tausta3(){
+  elem2.style.backgroundColor = "skyblue";
+  elem2.innerHTML = "Klikkaa alla olevaa nappia niin tiedät"; 
+}
+function tausta4(){
+  elem2.style.backgroundColor = "lightgreen";
+  elem2.innerHTML = "Näin, onClick-tapahtuma määritellään html-tiedoston elementissä"; 
+}
+function tausta5(){
+  elem3.style.backgroundColor = "lightgreen";
+  elem3.innerHTML = "Käynnistit mousedown-käskyn"; 
+}
+function tausta6(){
+  elem3.style.backgroundColor = "gray";
+  elem3.innerHTML = "Käynnistit mouseup-käskyn"; 
+}
+function tausta7(){
+  elem3.style.backgroundColor = "pink";
+  elem3.innerHTML = "Käynnistit mouseover-käskyn"; 
+}
+function tausta8(){
+  elem3.style.backgroundColor = "yellow";
+  elem3.innerHTML = "Käynnistit mouseout-käskyn"; 
+}
+function tausta9(){
+  elem3.style.backgroundColor = "skyblue";
+  elem3.innerHTML = "Käynnistit onchange-käskyn"; 
+}
+function tausta10(){
+  bg.style.backgroundColor = "gray";
+  bg.innerHTML += "vaihdoit taustaväriä"; 
+}
+function tausta11(){
+  bg.style.backgroundColor = "green";
+  bg.innerHTML = "Käynnistit unload-käskyn"; 
+}
+   </script>
     <script src="scripts/harjoitukset1.js"></script>
 </body>
 </html>

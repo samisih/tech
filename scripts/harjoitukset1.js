@@ -16,10 +16,21 @@ function silmukka() {
 
 //Harjoitukset 2.
 function moikka() {
-    document.querySelector("#moikka").innerHTML = "<h1>Moi!</h1>";
-    document.querySelector("#moikka").style.backgroundColor = "red";
-    document.querySelector("#moikka").style.color = "white";
-    document.querySelector("#moikka").style.textAlign = "center";
+    var otsikko = document.createElement("h1");
+    otsikko.innerHTML = "Moi!";
+    var paikka = document.querySelector("#moikka");
+    paikka.appendChild(otsikko);
+
+    /*     otsikko.style.backgroundColor = "red"; otsikko.style.color = "white";
+        otsikko.style.textAlign = "center"; */
+    /*   var h = document.createElement("H1"); var t =
+      document.createTextNode("Hello World"); h.appendChild(t);
+      document.appendChild(h); */
+
+    var tyyli = document.createElement("style");
+    var teksti = tyyli.createTextNode("h1 {background-color:red; color:white; font-size:3rem}");
+    tyyli.appendChild(teksti);
+    document.head.appendChild(tyyli);
 }
 
 //Harjoitus 3. Funktio parametrit merkkijono
@@ -131,18 +142,19 @@ function valitseBomf() {
 /* Tehtävä 9. */
 
 function aivoPahkina() {
-    /*     var nappi = document.createElement("button");
-        btn.id = "btn";
-        btn.setAttribute("onclick", "btn");
-        document.body.appendChild(nappi);
-    
+    /*     var nappi = document.createElement("button"); btn.id = "btn";
+        btn.setAttribute("onclick", "btn"); document.body.appendChild(nappi);
+
         toinenFunktio(); */
 
-    document.querySelector("#aivo").innerHTML = "<h1>Ei todellakaan auennut tämä tehtävä</h1>";
+    var btn = document.querySelector("#aivo").createElement(BUTTON);
+    btn.innerHTML = "Moikka!";
     document.querySelector("#aivo").outerHTML += "<button>Tais aueta vai aukesko?</button>";
 }
 /*
-function toinenFunktio() {
-    document.querySelector("#aivo").innerHTML = "<h1>Ei todellakaan auennut tämä tehtävä</h1>";
-    document.querySelector("#aivo").outerHTML += "<button>Tais aueta vai aukesko?</button>";
+function toinenFunktio() {document.querySelector("#aivo").innerHTML = "<h1>Ei
+    todellakaan auennut tämä tehtävä</h1>";
+    document.querySelector("#aivo").outerHTML += "<button>Tais aueta vai
+    aukesko?</button>";
 } */
+
